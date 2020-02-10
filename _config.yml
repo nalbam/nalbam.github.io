@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "nalbam.Blog"
+title                    : "nalbam.Tech"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "nalbam"
@@ -84,9 +84,9 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               : 
+  username               :
 facebook:
-  username               : 
+  username               :
   app_id                 :
   publisher              :
 og_image                 : # Open Graph/Twitter default site image
@@ -107,7 +107,7 @@ analytics:
 # Site Author
 author:
   name             : "nalbam"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/nalbam.png"
   bio              : "DevOps Engineer / SRE / AWS DeepRacer 2019 Championship Finalist."
   location         : "Seoul, Korea"
   email            :
@@ -217,7 +217,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Plugins (previously gems:)
 plugins:

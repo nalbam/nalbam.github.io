@@ -22,8 +22,6 @@ GitHub Action 을 직접 작성하는 방법을 소개 합니다.
 
 Marketplace 에 배포 하기 위한 정보를 입력 합니다.
 
-* <https://help.github.com/en/actions/automating-your-workflow-with-github-actions/metadata-syntax-for-github-actions#example-using-public-docker-container-on-github>
-
 `runs.image` 에 Dockerfile 를 넣으면 Action 수행 마다 docker build 를 합니다.
 이미 docker image 를 만들었다면 이미지 경로를 넣어 줍니다.
 
@@ -42,11 +40,11 @@ runs:
   # image: "docker://opspresso/action-s3-sync:v0.2.3"
 ```
 
+* <https://help.github.com/en/actions/automating-your-workflow-with-github-actions/metadata-syntax-for-github-actions#example-using-public-docker-container-on-github>
+
 ## Dockerfile
 
 Action 에서 사용할 Dockerfile 을 작성 합니다.
-
-* <https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-a-docker-container-action>
 
 ```dockerfile
 FROM opspresso/builder:alpine
@@ -55,6 +53,8 @@ ADD entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 ```
+
+* <https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-a-docker-container-action>
 
 ## entrypoint.sh
 

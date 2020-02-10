@@ -1,5 +1,5 @@
 ---
-title: "GitHub Action 작성하기"
+title: "GitHub Action 빌드하기"
 date: 2020-02-10 15:17:23 +0900
 ---
 GitHub Actions 가 GA 되어 모든 사람이 사용 할수 있게 되고 어느 정도 흘렀습니다.
@@ -39,13 +39,13 @@ jobs: # Job 설정
           npm install
 
       - name: Release to GitHub # 네번째 step
-        uses: opspresso/action-builder@master # 사용자 정의 action 을 가져온다
+        uses: opspresso/action-builder@master # 사용자 정의 action
         with:
           args: --release # 사용자 정의 argument 를 전달
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 사용자 정의 secret 을 전달
+          GITHUB_TOKEN: $\{\{ secrets.GITHUB_TOKEN \}\} # 사용자 정의 secret 을 전달
 ```
 
 그리고 이 코드를 push 하면 바로 빌드가 시작 됩니다.
 
-![guthub-action-build](/images/2020-01-10/guthub-action-build.png)
+![guthub-action-build](/assets/images/2020-01-10/guthub-action-build.png)

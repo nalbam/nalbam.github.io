@@ -83,6 +83,8 @@ Action 코드를 실행 하기전 GitHub > Setings > Secrets 에 사용자 정�
 ![guthub-secrets](/assets/images/2020-02-10/github-secrets.png)
 
 ```yaml
+# .github/workflows/push.yml
+
 ...
 
 jobs:

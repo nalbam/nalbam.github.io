@@ -1,5 +1,5 @@
 ---
-title: "GitHub Action 빌드하기"
+title: "GitHub Action 으로 빌드하기"
 date: 2020-02-10 15:17:23 +0900
 ---
 GitHub Actions 가 GA 되어 모든 사람이 사용할 수 있게 되고 어느 정도 흘렀습니다.

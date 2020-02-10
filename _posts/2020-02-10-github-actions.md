@@ -8,10 +8,11 @@ GitHub Actions 가 GA 되어 모든 사람이 사용 할수 있게 되고 어느
 GitHub Action 은 GitHub 이 만든 CI/CD 서비스 입니다.
 가장 가까운 경쟁자로는 CircleCi, TravisCi 등이 있겠네요.
 
-이것들 과의 가장 큰 차이는 위의 두 서비스는 외부의 깃의 권한을 부여 하고, Hook 을 통해 이벤트를 받고, 소스를 끌어다가 빌드를 시작 합니다.
+이것들 과의 가장 큰 차이는, 위의 두 서비스는 외부에 존재하는 깃의 권한을 부여 하고, Hook 을 통해 이벤트를 받고, 소스를 끌어다가 빌드를 시작 합니다.
+
 GitHub Action 은 GitHub 을 위한 서비스로, 각 소스 root 의 .github/workflows/ 디렉토리에 빌드 설정이 있으면 해당 조건에 따라 무조건 실행 됩니다.
 
-GitHub Action 은 다음과 같은 형식으로 구성 됩니다.
+GitHub Action 은 다음과 같이 구성 됩니다.
 
 ```yaml
 name: Build-Push # Workflow 이름
@@ -43,9 +44,9 @@ jobs: # Job 설정
         with:
           args: --release # 사용자 정의 argument 를 전달
         env:
-          GITHUB_TOKEN: $\{\{ secrets.GITHUB_TOKEN \}\} # 사용자 정의 secret 을 전달
+          GITHUB_TOKEN: $\{{ secrets.GITHUB_TOKEN }} # 사용자 정의 secret 을 전달
 ```
 
 그리고 이 코드를 push 하면 바로 빌드가 시작 됩니다.
 
-![guthub-action-build](/assets/images/2020-01-10/guthub-action-build.png)
+![guthub-action-build](/assets/images/2020-02-10/guthub-action-build.png)

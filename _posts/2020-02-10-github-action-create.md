@@ -88,8 +88,8 @@ jobs:
       - name: Publish to AWS S3
         uses: opspresso/action-s3-sync@master
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${ { secrets.AWS_ACCESS_KEY_ID } }
+          AWS_SECRET_ACCESS_KEY: ${ { secrets.AWS_SECRET_ACCESS_KEY } }
           AWS_REGION: "us-east-1"
           FROM_PATH: "./target/publish"
           DEST_PATH: "s3://your_bucket_name/path/"

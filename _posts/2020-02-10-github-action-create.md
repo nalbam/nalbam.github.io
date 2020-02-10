@@ -14,5 +14,62 @@ GitHub Action 을 직접 작성하는 방법을 소개 합니다.
 └── entrypoint.sh # Dockerfile 에서 실행될 스크립트
 ```
 
+## action.yml
+
+Marketplace 에 배포 하기 위한 정보를 입력 합니다.
+
+* <https://help.github.com/en/actions/automating-your-workflow-with-github-actions/metadata-syntax-for-github-actions#example-using-public-docker-container-on-github>
+
+`runs.image` 에 Dockerfile 를 넣으면 Action 수행 마다 docker build 를 합니다.
+이미 docker image 를 만들었다면 이미지 경로를 넣어 줍니다.
+
+```yaml
+name: "AWS S3 Sync"
+description: "Sync a directory to an AWS S3 repository"
+author: "Jungyoul Yu <@nalbam>"
+
+branding:
+  icon: "refresh-cw"
+  color: "green"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  # image: "docker://opspresso/action-s3-sync:v0.2.3"
+```
+
+## Dockerfile
+
+Action 에서 사용할 Dockerfile 을 작성 합니다.
+
+* <https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-a-docker-container-action>
+
+```dockerfile
+FROM opspresso/builder:alpine
+
+ADD entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
+```
+
+## entrypoint.sh
+
+Docker image 실행시 동작할 쉘을 이력해 줍니다.
+
+```bash
+#!/bin/bash
+
+# aws credentials
+aws configure <<-EOF > /dev/null 2>&1
+${AWS_ACCESS_KEY_ID}
+${AWS_SECRET_ACCESS_KEY}
+${AWS_REGION}
+text
+EOF
+
+# aws s3 sync
+aws s3 sync ${FROM_PATH} ${DEST_PATH} ${OPTIONS}
+```
+
 참고 문서
 * <https://help.github.com/en/actions/automating-your-workflow-with-github-actions>

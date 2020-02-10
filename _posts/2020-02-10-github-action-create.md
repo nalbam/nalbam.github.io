@@ -77,6 +77,11 @@ aws s3 sync ${FROM_PATH} ${DEST_PATH} ${OPTIONS}
 
 ## 실행
 
+Action 코드를 실행 하기전 GitHub > Setings > Secrets 에 사용자 정의 secret 을 입력 합니다.
+이번 Action 은 `AWS_ACCESS_KEY_ID` 과 `AWS_SECRET_ACCESS_KEY` 이 필요 합니다.
+
+![guthub-secrets](/assets/images/2020-02-10/github-secrets.png)
+
 ```yaml
 ...
 
@@ -95,6 +100,13 @@ jobs:
           DEST_PATH: "s3://your_bucket_name/path/"
           OPTIONS: "--acl public-read"
 ```
+
+## 지금까지 만든 Actions
+
+* <https://github.com/marketplace/actions/aws-s3-sync>
+* <https://github.com/marketplace/actions/docker-push>
+* <https://github.com/marketplace/actions/post-slack>
+* <https://github.com/marketplace/actions/release-to-github>
 
 ## 참고 문서
 

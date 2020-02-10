@@ -4,6 +4,10 @@ date: 2020-02-10 16:29:54 +0900
 ---
 GitHub Action 을 직접 작성하는 방법을 소개 합니다.
 
+```
+이 Action 은 local 파일을 AWS S3 에 sync 하기위한 Action 입니다.
+```
+
 빈 레파지토리를 만들고, 다음과 같은 파일을 생성 합니다.
 
 ```
@@ -69,6 +73,26 @@ EOF
 
 # aws s3 sync
 aws s3 sync ${FROM_PATH} ${DEST_PATH} ${OPTIONS}
+```
+
+## 실행
+
+```yaml
+...
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+      - name: Publish to AWS S3
+        uses: opspresso/action-s3-sync@master
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: "us-east-1"
+          FROM_PATH: "./target/publish"
+          DEST_PATH: "s3://your_bucket_name/path/"
+          OPTIONS: "--acl public-read"
 ```
 
 참고 문서

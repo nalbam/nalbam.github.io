@@ -15,6 +15,8 @@ GitHub Action 은 GitHub 을 위한 서비스로, 각 소스 root 의 .github/wo
 GitHub Action yaml 은 다음과 같이 구성 됩니다.
 
 ```yaml
+# .github/workflows/push.yml
+
 name: Build-Push # Workflow 이름
 
 on: # Event 조건

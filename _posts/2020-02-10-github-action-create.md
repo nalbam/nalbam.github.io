@@ -96,5 +96,6 @@ jobs:
           OPTIONS: "--acl public-read"
 ```
 
-참고 문서
+## 참고 문서
+
 * <https://help.github.com/en/actions/automating-your-workflow-with-github-actions>

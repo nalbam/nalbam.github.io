@@ -85,13 +85,21 @@ Action 코드를 실행 하기전 GitHub > Setings > Secrets 에 사용자 정�
 ```yaml
 # .github/workflows/push.yml
 
-...
+name: Build-Push
+
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Publish to AWS S3
         uses: opspresso/action-s3-sync@master
         env:

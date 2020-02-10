@@ -56,3 +56,6 @@ Action 코드를 Push 하기전 (필요하다면), GitHub > Setings > Secrets �
 ![guthub-action-build](/assets/images/2020-02-10/github-action-build.png)
 
 여기에서 다른 SaaS CI/CD 서비스와 또 다른 점은, 사용자 정의 Action 을 빌드를 수행 할때 마다 docker build 를 한다는 것 입니다.
+이미 빌드된 이미지를 가져오도록 해도 될텐데 말이죠...
+
+이 Action 에서는 사용자 정의 Action step 을 사용 했습니다. 다음 포스트에서 사용자 정의 Action 을 만드는 방법을 소개 하도록 하겠습니다.

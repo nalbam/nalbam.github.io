@@ -129,7 +129,7 @@ author:
       url: "https://github.com/nalbam"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/nalbam"
+      # url: "https://instagram.com/nalbam"
 
 # Site Footer
 footer:

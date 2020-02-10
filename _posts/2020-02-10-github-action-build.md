@@ -2,17 +2,17 @@
 title: "GitHub Action 빌드하기"
 date: 2020-02-10 15:17:23 +0900
 ---
-GitHub Actions 가 GA 되어 모든 사람이 사용 할수 있게 되고 어느 정도 흘렀습니다.
+GitHub Actions 가 GA 되어 모든 사람이 사용할 수 있게 되고 어느 정도 흘렀습니다.
 그즈음 몇가지 Action 을 만들어 GitHub Marketplace 에 올렸으나, 이제야 한번 정리해 봅니다.
 
 GitHub Action 은 GitHub 이 만든 CI/CD 서비스 입니다.
-가장 가까운 경쟁자로는 CircleCi, TravisCi 등이 있겠네요.
+가장 가까운 경쟁자로는 CircleCi, TravisCi 등의 SaaS CI/CD 서비스가 있겠네요.
 
-이것들 과의 가장 큰 차이는, 위의 두 서비스는 외부에 존재하는 깃의 권한을 부여 하고, Hook 을 통해 이벤트를 받고, 소스를 끌어다가 빌드를 시작 합니다.
+위의 두 서비스는 외부에 존재하는 깃의 권한을 부여 하고, Hook 을 통해 이벤트를 받고, 소스를 끌어다가 빌드를 시작 합니다.
 
 GitHub Action 은 GitHub 을 위한 서비스로, 각 소스 root 의 .github/workflows/ 디렉토리에 빌드 설정이 있으면 해당 조건에 따라 무조건 실행 됩니다.
 
-GitHub Action 은 다음과 같이 구성 됩니다.
+GitHub Action yaml 은 다음과 같이 구성 됩니다.
 
 ```yaml
 name: Build-Push # Workflow 이름
@@ -47,7 +47,7 @@ jobs: # Job 설정
           SLACK_TOKEN: ${ { secrets.SLACK_TOKEN } } # 사용자 정의 secret 을 전달
 ```
 
-Action 코드를 Push 하기전 (필요하다면), GitHub > Setings > Secrets 에 사용자 정의 secret 을 입력 합니다.
+Action 코드를 Push 하기전 (필요하다면) GitHub > Setings > Secrets 에 사용자 정의 secret 을 입력 합니다.
 
 ![guthub-secrets](/assets/images/2020-02-10/github-secrets.png)
 
@@ -55,7 +55,8 @@ Action 코드를 Push 하기전 (필요하다면), GitHub > Setings > Secrets �
 
 ![guthub-action-build](/assets/images/2020-02-10/github-action-build.png)
 
-여기에서 다른 SaaS CI/CD 서비스와 또 다른 점은, 사용자 정의 Action 을 빌드를 수행 할때 마다 docker build 를 한다는 것 입니다.
-이미 빌드된 이미지를 가져오도록 해도 될텐데 말이죠...
+여기에서 GitHub Action 다른 SaaS CI/CD 서비스와 다르게 빌드를 수행 할때 마다 docker build 를 합니다.
+외부의 Docker Registry 또는 GitHub Packages 에서 Image 만 Pull 하는 방법이 있다면 추가 하겠습니다.
 
-이 Action 에서는 사용자 정의 Action step 을 사용 했습니다. 다음 포스트에서 사용자 정의 Action 을 만드는 방법을 소개 하도록 하겠습니다.
+이 Action 에서는 사용자 정의 Action step 을 사용 했습니다.
+다음 포스트에서 사용자 정의 Action 을 만드는 방법을 소개 하겠습니다.

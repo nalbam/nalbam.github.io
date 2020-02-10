@@ -84,6 +84,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    steps:
       - name: Publish to AWS S3
         uses: opspresso/action-s3-sync@master
         env:

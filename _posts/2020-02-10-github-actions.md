@@ -44,9 +44,11 @@ jobs: # Job 설정
         with:
           args: --release # 사용자 정의 argument 를 전달
         env:
-          GITHUB_TOKEN: $\{{ secrets.GITHUB_TOKEN }} # 사용자 정의 secret 을 전달
+          GITHUB_TOKEN: ${ { secrets.GITHUB_TOKEN } } # 사용자 정의 secret 을 전달
 ```
 
 그리고 이 코드를 push 하면 바로 빌드가 시작 됩니다.
 
 ![guthub-action-build](/assets/images/2020-02-10/guthub-action-build.png)
+
+여기에서 다른 SaaS CI/CD 서비스와 또 다른 점은, 사용자 정의 action 을 빌드를 수행 할때 마다 docker build 를 한다는 것 입니다.

@@ -63,3 +63,5 @@ For more code, please refer to [here](https://github.com/nalbam/doorman).
 ## Architecture
 
 ![doorman-arch](/assets/images/2020-02-28/doorman-arch.png)
+
+Thanks for reading.

@@ -21,40 +21,41 @@ Higher pixel count and better cameras are expensive, especially since they need 
 
 ## Raspberry pi
 
-처음에는 [AWS Deeplens](https://aws.amazon.com/ko/deeplens/) 가 고려되었으나, 열감지 카메라가 GPIO 틑 통해 정보를 받으므로 다른 대안을 찾아야 했습니다. 그래서 책상 서랍에 있던 라즈베리파이를 선택 했습니다.
+Initially, [AWS Deeplens](https://aws.amazon.com/ko/deeplens/) was considered, but the thermal cameras received information through GPIO, so we had to find another alternative. So I chose the Raspberry Pi which was in the desk drawer.
 
-다행이도 라즈베리파이 케이스가 레고호환이어서 라즈베리 카메라와 열감지 카메라를 레고 거치대에 설치할 수 있었습니다.
+Fortunately, the Raspberry Pi case was compatible with Lego, so the Raspberry camera and thermal camera could be installed on the Lego blocks.
 
 ![raspberrypi](/assets/images/2020-02-28/raspberrypi.jpg)
 
-라즈베리파이에 python 으로 된 프로그램을 설치하고, [Amazon S3](https://aws.amazon.com/ko/s3/) Bucket 에 사진을 업로드 할수 있는 권한도 부여 했습니다.
+I installed a python program on my Raspberry Pi and gave it permission to upload photos to the [Amazon S3](https://aws.amazon.com/ko/s3/).
 
-자세한 코드는 [여기](https://github.com/nalbam/rpi-doorman)를 참고 하세요.
+For more code, please refer to [here](https://github.com/nalbam/rpi-doorman).
 
 ## Slack App
 
-슬랙에 알림을 받거나, 슬랙에서 사용자 이름을 지정 하기 위하여 [설정법](https://github.com/nalbam/deeplens-doorman/blob/master/README-slack.md) 에 따라 Slack App 을 만들어 줬습니다.
+In order to receive notifications from Slack, or to save usernames in Slack, Slack App was created according to [Settings](https://github.com/nalbam/deeplens-doorman/blob/master/README-slack.md).
 
 ![slack-04](/assets/images/2020-02-28/slack-04.png)
 
 ## Lambda Backend
 
-Amazon S3 Bucket 에 사진이 업로드 되면 `Trigger` 에 의하여 [Aws Lambda function](https://aws.amazon.com/ko/lambda/) 이 호출되야 합니다.
-그리고 Lambda function 에서는 [Aws Rekognition](https://aws.amazon.com/ko/rekognition/) 으로 안면인식을 수행하여 사람별로 [Amazon DynamoDB](https://aws.amazon.com/ko/dynamodb/) 에 저장 합니다.
+When the photo is uploaded to Amazon S3 Bucket, [Aws Lambda function](https://aws.amazon.com/ko/lambda/) should be called by `Trigger`.
+The Lambda function performs facial recognition with [Aws Rekognition](https://aws.amazon.com/ko/rekognition/) and stores them in [Amazon DynamoDB](https://aws.amazon.com/ko/dynamodb/) for each person.
 
-이번에는 [Serverless framework](https://serverless.com/) 을 이용하여 개발 및 배포를 했습니다.
+This time, I developed and deployed using [Serverless framework](https://serverless.com/).
 
-자세한 코드는 [여기](https://github.com/nalbam/deeplens-doorman-backend)를 참고 하세요.
+For more code, please refer to [here](https://github.com/nalbam/deeplens-doorman-backend).
 
 ## Amplify Frontend
 
-DynamoDB 에 저장된 이름과 사진을 웹을 통해 서비스 합니다.
-이 앱은 [AWS Amplify](https://aws.amazon.com/ko/amplify/) 를 이용하여 개발 및 배포를 했습니다.
+Web-based service for names and photos stored in DynamoDB.
+This app was developed and distributed using [AWS Amplify](https://aws.amazon.com/ko/amplify/).
 
-Forntend 는 `Javascript` 와 `React` 를 사용 했습니다. 그리고 `Rest API` 를 사용하여 Backend 에서 만든 DynamoDB 를 조회 하였고, 이 역시 `AWS Lambda function` 으로 생성 하였습니다.
+Forntend used `Javascript` and` React`.
+Then, I used the 'Rest API' to search DynamoDB created in Backend, which I also created with the `AWS Lambda function`.
 
-인식은 하였으나 이름을 모르는 사람은 `Unknown` 으로 저장 하였고, 이름을 저장 하는 폼을 위해 [Amazon Cognito](https://aws.amazon.com/ko/cognito/) 를 사용해서 인증을 처리 했습니다. Amplify 를 통해 손 쉽게 로그인 및 가입 페이지를 직접 코딩하지 않고도 적용할 수 있었습니다.
+If the app doesn't know the name, it is saved as `Unknown`, and the form that stores the name is handled using [Amazon Cognito](https://aws.amazon.com/ko/cognito/). Amplify made it easy to apply the login and signup pages without coding them.
 
 ![doorman-web](/assets/images/2020-02-28/doorman-web.png)
 
-자세한 코드는 [여기](https://github.com/nalbam/doorman)를 참고 하세요.
+For more code, please refer to [here](https://github.com/nalbam/doorman).

@@ -60,3 +60,7 @@ Forntend 는 `Javascript` 와 `React` 를 사용 했습니다.
 ![doorman-web](/assets/images/2020-02-28/doorman-web.png)
 
 자세한 코드는 [여기](https://github.com/nalbam/doorman)를 참고 하세요.
+
+## Architecture
+
+![doorman-arch](/assets/images/2020-02-28/doorman-arch.png)

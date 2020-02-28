@@ -25,17 +25,34 @@ AMG8833 센서를 부착한 [Adafruit AMG8833 IR Thermal Camera Breakout](http:/
 
 다행이도 라즈베리파이 케이스가 레고호환이어서 라즈베리 카메라와 열감지 카메라를 레고 거치애에 설치할 수 있었습니다.
 
-라즈베리 카메라에
+![raspberrypi](/assets/images/2020-02-28/raspberrypi.jpg)
+
+라즈베리 카메라에 python 으로 된 프로그램을 설치하고, AWS S3 Bucket 에 사진을 업로드 할수 ㅇㅆ는 권한도 부여 했습니다.
+
+자세한 코드는 [여기](https://github.com/nalbam/rpi-doorman)를 참고 하세요.
 
 ## Slack
 
-[Slack App](https://github.com/nalbam/deeplens-doorman/blob/master/README-slack.md) 설정 방법에 따라 슬랙 앱을 생성 합니다.
+슬랙에 알림을 받거나, 슬랙에서 사용자 이름을 지정 하기 위하여 [설정법](https://github.com/nalbam/deeplens-doorman/blob/master/README-slack.md) 에 따라 Slack App 을 만들어 줬습니다.
+
+![slack-04](/assets/images/2020-02-28/slack-04.jpg)
 
 ## Lambda Backend
 
-AWS S3 Bucket 에 사진이 업로드 되면 Trigger 에의하여 Aws Lamdba function 이 호출되야 합니다.
-그리고 lambda function 에서는 Aws Rekognition 으로 안면인식을 수행 합니다.
+AWS S3 Bucket 에 사진이 업로드 되면 Trigger 에의하여 `Aws Lambda function` 이 호출되야 합니다.
+그리고 Lambda function 에서는 `Aws Rekognition` 으로 안면인식을 수행하여 사람별로 `AWS DynamoDB` 에 저장 합니다.
 
-이번에는 [Serverless framework](https://serverless.com/) 을 이용하여 개발 및 배포를 하도록 하겠습니다.
+이번에는 [Serverless framework](https://serverless.com/) 을 이용하여 개발 및 배포를 했습니다.
+
+자세한 코드는 [여기](https://github.com/nalbam/deeplens-doorman-backend)를 참고 하세요.
 
 ## Amplify Frontend
+
+DynamoDB 에 저장된 이름과 사진 주소를 웹을 통해 서비스 합니다.
+이 앱은 [AWS Amplify](https://aws.amazon.com/ko/amplify/) 를 이용하여 개발 및 배포를 했습니다.
+
+Forntend 는 `Javascript` 와 `React` 를 사용 했습니다. 그리고 `Rest API` 를 사용하여 Backend 에서 만든 DynamoDB 를 조회 하였고, 이 역시 AWS Lambda function 으로 생성 하였습니다.
+
+인식은 하였으나 이름을 모르는 사람은 `Unknown` 으로 저장 하였고, 이름을 저장 하는 폼을 위해 `AWS Cognito` 를 사용해서 인증 처리 했습니다. Amplify 를 통해 손 쉽게 로그인 및 가입 페이지를 직접 코딩하지 않고도 적용할 수 있었습니다.
+
+자세한 코드는 [여기](https://github.com/nalbam/doorman)를 참고 하세요.

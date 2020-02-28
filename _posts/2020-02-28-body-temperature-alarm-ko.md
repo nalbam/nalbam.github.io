@@ -39,8 +39,8 @@ AMG8833 센서를 부착한 [Adafruit AMG8833 IR Thermal Camera Breakout](http:/
 
 ## Lambda Backend
 
-AWS S3 Bucket 에 사진이 업로드 되면 Trigger 에의하여 `Aws Lambda function` 이 호출되야 합니다.
-그리고 Lambda function 에서는 `Aws Rekognition` 으로 안면인식을 수행하여 사람별로 `AWS DynamoDB` 에 저장 합니다.
+AWS S3 Bucket 에 사진이 업로드 되면 Trigger 에의하여 [Aws Lambda function](https://aws.amazon.com/ko/lambda/) 이 호출되야 합니다.
+그리고 Lambda function 에서는 [Aws Rekognition](https://aws.amazon.com/ko/rekognition/) 으로 안면인식을 수행하여 사람별로 [Amazon DynamoDB](https://aws.amazon.com/ko/dynamodb/) 에 저장 합니다.
 
 이번에는 [Serverless framework](https://serverless.com/) 을 이용하여 개발 및 배포를 했습니다.
 
@@ -53,7 +53,7 @@ DynamoDB 에 저장된 이름과 사진 주소를 웹을 통해 서비스 합니
 
 Forntend 는 `Javascript` 와 `React` 를 사용 했습니다. 그리고 `Rest API` 를 사용하여 Backend 에서 만든 DynamoDB 를 조회 하였고, 이 역시 AWS Lambda function 으로 생성 하였습니다.
 
-인식은 하였으나 이름을 모르는 사람은 `Unknown` 으로 저장 하였고, 이름을 저장 하는 폼을 위해 `AWS Cognito` 를 사용해서 인증 처리 했습니다. Amplify 를 통해 손 쉽게 로그인 및 가입 페이지를 직접 코딩하지 않고도 적용할 수 있었습니다.
+인식은 하였으나 이름을 모르는 사람은 `Unknown` 으로 저장 하였고, 이름을 저장 하는 폼을 위해 [Amazon Cognito](https://aws.amazon.com/ko/cognito/) 를 사용해서 인증 처리 했습니다. Amplify 를 통해 손 쉽게 로그인 및 가입 페이지를 직접 코딩하지 않고도 적용할 수 있었습니다.
 
 ![doorman-web](/assets/images/2020-02-28/doorman-web.png)
 

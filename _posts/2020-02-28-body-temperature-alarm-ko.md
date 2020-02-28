@@ -21,7 +21,7 @@ AMG8833 센서를 부착한 [Adafruit AMG8833 IR Thermal Camera Breakout](http:/
 
 ## Raspberry pi
 
-처음에는 [AWS Deeplens](https://aws.amazon.com/ko/deeplens/) 가 고려되었으나, 열감지 카메라가 GPIO 틑 통해 정보를 받으므로 다른 대안을 찾아야 했습니다.
+처음에는 [AWS Deeplens](https://aws.amazon.com/ko/deeplens/) 가 고려되었으나, 열감지 카메라가 GPIO 를 통해 정보를 받으므로 다른 대안을 찾아야 했습니다.
 그래서 책상 서랍에 있던 라즈베리파이를 선택 했습니다.
 
 다행이도 라즈베리파이 케이스가 레고호환이어서 라즈베리 카메라와 열감지 카메라를 레고 거치대에 설치할 수 있었습니다.

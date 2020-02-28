@@ -21,7 +21,8 @@ AMG8833 센서를 부착한 [Adafruit AMG8833 IR Thermal Camera Breakout](http:/
 
 ## Raspberry pi
 
-처음에는 [AWS Deeplens](https://aws.amazon.com/ko/deeplens/) 가 고려되었으나, 열감지 카메라가 GPIO 틑 통해 정보를 받으므로 다른 대안을 찾아야 했습니다. 그래서 책상 서랍에 있던 라즈베리파이를 선택 했습니다.
+처음에는 [AWS Deeplens](https://aws.amazon.com/ko/deeplens/) 가 고려되었으나, 열감지 카메라가 GPIO 틑 통해 정보를 받으므로 다른 대안을 찾아야 했습니다.
+그래서 책상 서랍에 있던 라즈베리파이를 선택 했습니다.
 
 다행이도 라즈베리파이 케이스가 레고호환이어서 라즈베리 카메라와 열감지 카메라를 레고 거치대에 설치할 수 있었습니다.
 
@@ -51,7 +52,8 @@ Amazon S3 Bucket 에 사진이 업로드 되면 `Trigger` 에 의하여 [Aws Lam
 DynamoDB 에 저장된 이름과 사진을 웹을 통해 서비스 합니다.
 이 앱은 [AWS Amplify](https://aws.amazon.com/ko/amplify/) 를 이용하여 개발 및 배포를 했습니다.
 
-Forntend 는 `Javascript` 와 `React` 를 사용 했습니다. 그리고 `Rest API` 를 사용하여 Backend 에서 만든 DynamoDB 를 조회 하였고, 이 역시 `AWS Lambda function` 으로 생성 하였습니다.
+Forntend 는 `Javascript` 와 `React` 를 사용 했습니다.
+그리고 `Rest API` 를 사용하여 Backend 에서 만든 DynamoDB 를 조회 하였고, 이 역시 `AWS Lambda function` 으로 생성 하였습니다.
 
 인식은 하였으나 이름을 모르는 사람은 `Unknown` 으로 저장 하였고, 이름을 저장 하는 폼을 위해 [Amazon Cognito](https://aws.amazon.com/ko/cognito/) 를 사용해서 인증을 처리 했습니다. Amplify 를 통해 손 쉽게 로그인 및 가입 페이지를 직접 코딩하지 않고도 적용할 수 있었습니다.
 

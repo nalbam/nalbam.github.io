@@ -1,5 +1,5 @@
 ---
-title: "라즈베리파이, 온도센서, 아마존웹서비스를 활용한 체온 알람 서비스 - Doorman"
+title: "라즈베리파이, 온도센서, 아마존웹서비스를 활용한 체온 알람 서비스"
 date: 2020-02-28 12:26:54 +0900
 ---
 
@@ -13,51 +13,35 @@ date: 2020-02-28 12:26:54 +0900
 
 AMG8833 센서를 부착한 [Adafruit AMG8833 IR Thermal Camera Breakout](http://www.devicemart.co.kr/goods/view?no=12382843) 입니다.
 
+![guthub-secrets](/assets/images/2020-02-28/amg8833.jpg)
+
 [Python + pygame 로 만든 샘플 코드 입니다.](https://learn.adafruit.com/adafruit-amg8833-8x8-thermal-camera-sensor/raspberry-pi-thermal-camera)
 
 ## Raspberry pi
 
-처음에는 AWS Deeplens 가 고려되었으나, 열감지 카메라가 GPIO 틑 통해 정보를 주고 받으므로 다른 대안을 찾아야 했습니다. 그래서 라즈베리파이를 선택 했습니다.
+처음에는 AWS Deeplens 가 고려되었으나, 열감지 카메라가 GPIO 틑 통해 정보를 받으므로 다른 대안을 찾아야 했습니다. 그래서 책상 서랍에 있던 라즈베리파이를 선택 했습니다.
 
 다행이도 라즈베리파이 케이스가 레고호환이어서 라즈베리 카메라와 열감지 카메라를 레고 거치애에 설치할 수 있었습니다.
 
-### raspberry pi config
+라즈베리카메라에
 
-라즈베리파이 설정에서 카메라와 I2C 릃 모두 활성화 해줍니다.
+## Slack
 
-```bash
-sudo raspi-config
+[Slack App](https://github.com/nalbam/deeplens-doorman/blob/master/README-slack.md) 설정 방법에 따라 슬랙 앱을 생성 합니다.
+
+이때 Slack `OAuth Access Token` 을 잘 저장해 둡니다.
+
+그리고 메시지를 받을 채널 ID 를 알아야 하는데, 슬랙을 브라우저에서 접속하면 알수 있습니다. 다음과 같은 형식 입니다.
+
+```
+https://app.slack.com/client/[SLACK_ID]/[CHANNEL_ID]
 ```
 
-```
-Interfacing Options -> Camera
-Interfacing Options -> I2C
-```
+## Lambda Backend
 
-프로그램에서 사용될 모듈을 설치 합니다.
+AWS S3 Bucket 에 사진이 업로드 되면 Trigger 에의하여 Aws Lamdba function 이 호출되야 합니다.
+그리고 lambda function 에서는 Aws Rekognition 으로 안면인식을 수행 합니다.
 
-```bash
-pip3 install boto3
-pip3 install colour
-pip3 install pygame
-pip3 install opencv-python
-pip3 install scipy
-pip3 install adafruit-blinka
-pip3 install adafruit-circuitpython-amg88xx
-```
+이번에는 [Serverless framework](https://serverless.com/) 을 이용하여 개발 및 배포를 하도록 하겠습니다.
 
-열화상 카메라서에서 온도 정보를 받고, 카메라에서 동영상을 받아서 조합 하고, 지정된 온도 이상이면 AWS S3 Bucket 에 업로드할 프로그램을 다운 받습니다.
-
-```bash
-git clone https://github.com/nalbam/rpi-doorman
-```
-
-옵션을 주어서 실행 하도록 합니다.
-
-```bash
-python3 ./rpi-doorman/run.py --min-temp 18 --max-temp 26 --bucket-name <DOORMAN-BUCKET-NAME>
-```
-
-## Lambda
-
-## Amplify
+## Amplify Frontend

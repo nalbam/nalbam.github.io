@@ -1,5 +1,5 @@
 ---
-title: "Temperature alarm service using AWS Cloud, Raspberry Pi and Thermal camera"
+title: "Body Heat Alarm Service using AWS Cloud, Raspberry Pi and Thermal camera"
 date: 2020-02-28 14:26:54 +0900
 ---
 

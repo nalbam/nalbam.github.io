@@ -1,23 +1,23 @@
 ---
-title: "Temperature alarm service using Amazon Web Services, Raspberry Pi and Thermal camera"
+title: "Temperature alarm service using AWS Cloud, Raspberry Pi and Thermal camera"
 date: 2020-02-28 14:26:54 +0900
 ---
 
-요즘 신종 코로나19(COVID-19) 로 인하여 국내외가 어지럽습니다. 한국에서도 많은 수의 확진자가 발생하고 있으며, 공항, 병원 등을 비롯한 많은 곳에 열감지 카메라들이 설치되고 있습니다. 하지만 많은 곳에서 카메라 옆에 사람이 상주하여 카메라를 계속 모니터링 하고있습니다.
+These days, the new corona 19 (COVID-19) is disturbing at home and abroad. There are a large number of confirmed patients in Korea, and thermal cameras are installed in many places, including airports and hospitals. But in many places camera people keep monitoring the camera.
 
-저는 IT 개발자로서 알고있는 지식으로 더 편하고, 빠르고, 정확하게 판단하고 알려주는 서비스를 만들고 싶다는 생각을 하게 되었습니다.
+As an IT developer, I have come to think that I want to create a service that makes notifications easier, faster and more accurate.
 
 ![doorman](/assets/images/2020-02-28/doorman.jpg)
 
 ## Thermal camera
 
-더 화소수가 많고 성능이 좋은 카메라는 비싸고, 특히 중국에서 배송이 되야 하므로, 즉시 구할수 있는 8x8 의 해상도를 가진 열화상 카메라를 구매했습니다.
+Higher pixel count and better cameras are expensive, especially since they need to be shipped from China, so I bought a thermal camera with an 8x8 resolution available immediately.
 
-AMG8833 센서를 부착한 [Adafruit AMG8833 IR Thermal Camera Breakout](http://www.devicemart.co.kr/goods/view?no=12382843) 입니다.
+[Adafruit AMG8833 IR Thermal Camera Breakout](http://www.devicemart.co.kr/goods/view?no=12382843)
 
 ![amg8833](/assets/images/2020-02-28/amg8833.jpg)
 
-[Python + pygame 로 만든 샘플 코드 입니다.](https://learn.adafruit.com/adafruit-amg8833-8x8-thermal-camera-sensor/raspberry-pi-thermal-camera)
+[Sample code made with python + pygame.](https://learn.adafruit.com/adafruit-amg8833-8x8-thermal-camera-sensor/raspberry-pi-thermal-camera)
 
 ## Raspberry pi
 
@@ -27,11 +27,11 @@ AMG8833 센서를 부착한 [Adafruit AMG8833 IR Thermal Camera Breakout](http:/
 
 ![raspberrypi](/assets/images/2020-02-28/raspberrypi.jpg)
 
-라즈베리 카메라에 python 으로 된 프로그램을 설치하고, [Amazon S3](https://aws.amazon.com/ko/s3/) Bucket 에 사진을 업로드 할수 있는 권한도 부여 했습니다.
+라즈베리파이에 python 으로 된 프로그램을 설치하고, [Amazon S3](https://aws.amazon.com/ko/s3/) Bucket 에 사진을 업로드 할수 있는 권한도 부여 했습니다.
 
 자세한 코드는 [여기](https://github.com/nalbam/rpi-doorman)를 참고 하세요.
 
-## Slack
+## Slack App
 
 슬랙에 알림을 받거나, 슬랙에서 사용자 이름을 지정 하기 위하여 [설정법](https://github.com/nalbam/deeplens-doorman/blob/master/README-slack.md) 에 따라 Slack App 을 만들어 줬습니다.
 
@@ -48,7 +48,7 @@ Amazon S3 Bucket 에 사진이 업로드 되면 `Trigger` 에 의하여 [Aws Lam
 
 ## Amplify Frontend
 
-DynamoDB 에 저장된 이름과 사진 주소를 웹을 통해 서비스 합니다.
+DynamoDB 에 저장된 이름과 사진을 웹을 통해 서비스 합니다.
 이 앱은 [AWS Amplify](https://aws.amazon.com/ko/amplify/) 를 이용하여 개발 및 배포를 했습니다.
 
 Forntend 는 `Javascript` 와 `React` 를 사용 했습니다. 그리고 `Rest API` 를 사용하여 Backend 에서 만든 DynamoDB 를 조회 하였고, 이 역시 `AWS Lambda function` 으로 생성 하였습니다.

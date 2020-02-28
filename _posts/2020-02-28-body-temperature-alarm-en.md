@@ -39,8 +39,8 @@ In order to receive notifications from Slack, or to save usernames in Slack, Sla
 
 ## Lambda Backend
 
-When the photo is uploaded to Amazon S3 Bucket, [Aws Lambda function](https://aws.amazon.com/ko/lambda/) should be called by `Trigger`.
-The Lambda function performs facial recognition with [Aws Rekognition](https://aws.amazon.com/ko/rekognition/) and stores them in [Amazon DynamoDB](https://aws.amazon.com/ko/dynamodb/) for each person.
+When the photo is uploaded to Amazon S3 Bucket, [AWS Lambda Function](https://aws.amazon.com/ko/lambda/) should be called by `Trigger`.
+The Lambda function performs facial recognition with [Amazon Rekognition](https://aws.amazon.com/ko/rekognition/) and stores them in [Amazon DynamoDB](https://aws.amazon.com/ko/dynamodb/) for each person.
 
 This time, I developed and deployed using [Serverless framework](https://serverless.com/).
 
@@ -52,7 +52,7 @@ Web-based service for names and photos stored in DynamoDB.
 This app was developed and distributed using [AWS Amplify](https://aws.amazon.com/ko/amplify/).
 
 Forntend used `Javascript` and` React`.
-Then, I used the 'Rest API' to search DynamoDB created in Backend, which I also created with the `AWS Lambda function`.
+Then, I used the 'Rest API' to search DynamoDB created in Backend, which I also created with the `AWS Lambda Function`.
 
 If the app doesn't know the name, it is saved as `Unknown`, and the form that stores the name is handled using [Amazon Cognito](https://aws.amazon.com/ko/cognito/). Amplify made it easy to apply the login and signup pages without coding them.
 

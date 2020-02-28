@@ -27,7 +27,7 @@ AMG8833 센서를 부착한 [Adafruit AMG8833 IR Thermal Camera Breakout](http:/
 
 ![raspberrypi](/assets/images/2020-02-28/raspberrypi.jpg)
 
-라즈베리 카메라에 python 으로 된 프로그램을 설치하고, AWS S3 Bucket 에 사진을 업로드 할수 ㅇㅆ는 권한도 부여 했습니다.
+라즈베리 카메라에 python 으로 된 프로그램을 설치하고, AWS S3 Bucket 에 사진을 업로드 할수 있는 권한도 부여 했습니다.
 
 자세한 코드는 [여기](https://github.com/nalbam/rpi-doorman)를 참고 하세요.
 
@@ -35,7 +35,7 @@ AMG8833 센서를 부착한 [Adafruit AMG8833 IR Thermal Camera Breakout](http:/
 
 슬랙에 알림을 받거나, 슬랙에서 사용자 이름을 지정 하기 위하여 [설정법](https://github.com/nalbam/deeplens-doorman/blob/master/README-slack.md) 에 따라 Slack App 을 만들어 줬습니다.
 
-![slack-04](/assets/images/2020-02-28/slack-04.jpg)
+![slack-04](/assets/images/2020-02-28/slack-04.png)
 
 ## Lambda Backend
 

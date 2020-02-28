@@ -7,13 +7,15 @@ date: 2020-02-28 12:26:54 +0900
 
 저는 IT 개발자로서 알고있는 지식으로 더 편하고, 빠르고, 정확하게 판단하고 알려주는 서비스를 만들고 싶다는 생각을 하게 되었습니다.
 
+![doorman](/assets/images/2020-02-28/doorman.jpg)
+
 ## Thermal camera
 
 더 화소수가 많고 성능이 좋은 카메라는 비싸고, 특히 중국에서 배송이 되야 하므로, 즉시 구할수 있는 8x8 의 해상도를 가진 열화상 카메라를 구매했습니다.
 
 AMG8833 센서를 부착한 [Adafruit AMG8833 IR Thermal Camera Breakout](http://www.devicemart.co.kr/goods/view?no=12382843) 입니다.
 
-![guthub-secrets](/assets/images/2020-02-28/amg8833.jpg)
+![amg8833](/assets/images/2020-02-28/amg8833.jpg)
 
 [Python + pygame 로 만든 샘플 코드 입니다.](https://learn.adafruit.com/adafruit-amg8833-8x8-thermal-camera-sensor/raspberry-pi-thermal-camera)
 
@@ -23,19 +25,11 @@ AMG8833 센서를 부착한 [Adafruit AMG8833 IR Thermal Camera Breakout](http:/
 
 다행이도 라즈베리파이 케이스가 레고호환이어서 라즈베리 카메라와 열감지 카메라를 레고 거치애에 설치할 수 있었습니다.
 
-라즈베리카메라에
+라즈베리 카메라에
 
 ## Slack
 
 [Slack App](https://github.com/nalbam/deeplens-doorman/blob/master/README-slack.md) 설정 방법에 따라 슬랙 앱을 생성 합니다.
-
-이때 Slack `OAuth Access Token` 을 잘 저장해 둡니다.
-
-그리고 메시지를 받을 채널 ID 를 알아야 하는데, 슬랙을 브라우저에서 접속하면 알수 있습니다. 다음과 같은 형식 입니다.
-
-```
-https://app.slack.com/client/[SLACK_ID]/[CHANNEL_ID]
-```
 
 ## Lambda Backend
 

@@ -66,6 +66,6 @@ Forntend 는 `Javascript` 와 `React` 를 사용 했습니다.
 
 ## Architecture
 
-![doorman-arch](/assets/images/2020-02-28/doorman-arch.png)
+![doorman-arch](/assets/images/2020-02-28/doorman-arch.jpg)
 
 감사합니다.

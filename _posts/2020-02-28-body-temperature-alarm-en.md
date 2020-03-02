@@ -16,7 +16,7 @@ As an IT developer, I have come to think that I want to create a service that ma
 
 Higher pixel count and better cameras are expensive, especially since they need to be shipped from China, so I bought a thermal camera with an 8x8 resolution available immediately.
 
-[Adafruit AMG8833 IR Thermal Camera Breakout](http://www.devicemart.co.kr/goods/view?no=12382843)
+[Adafruit AMG8833 IR Thermal Camera Breakout](https://www.adafruit.com/product/3538)
 
 ![amg8833](/assets/images/2020-02-28/amg8833.jpg)
 
@@ -65,6 +65,6 @@ For more code, please refer to [here](https://github.com/nalbam/doorman).
 
 ## Architecture
 
-![doorman-arch](/assets/images/2020-02-28/doorman-arch.png)
+![doorman-arch](/assets/images/2020-02-28/doorman-arch.jpg)
 
 Thanks for reading.

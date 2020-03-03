@@ -60,7 +60,7 @@ Forntend 는 `Javascript` 와 `React` 를 사용 했습니다.
 
 인식은 하였으나 이름을 모르는 사람은 `Unknown` 으로 저장 하였고, 이름을 저장 하는 폼을 위해 [Amazon Cognito](https://aws.amazon.com/ko/cognito/) 를 사용해서 인증을 처리 했습니다. Amplify 를 통해 손 쉽게 로그인 및 가입 페이지를 직접 코딩하지 않고도 적용할 수 있었습니다.
 
-![doorman-web](/assets/images/2020-02-28/doorman-web.png)
+![doorman-web](/assets/images/2020-02-28/doorman-web.jpg)
 
 자세한 코드는 [여기](https://github.com/nalbam/doorman)를 참고 하세요.
 

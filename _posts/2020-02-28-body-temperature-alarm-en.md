@@ -59,7 +59,7 @@ Then, I used the 'Rest API' to search DynamoDB created in Backend, which I also 
 
 If the app doesn't know the name, it is saved as `Unknown`, and the form that stores the name is handled using [Amazon Cognito](https://aws.amazon.com/ko/cognito/). Amplify made it easy to apply the login and signup pages without coding them.
 
-![doorman-web](/assets/images/2020-02-28/doorman-web.png)
+![doorman-web](/assets/images/2020-02-28/doorman-web.jpg)
 
 For more code, please refer to [here](https://github.com/nalbam/doorman).
 

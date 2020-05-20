@@ -85,7 +85,7 @@ S3 에서 `bastion.tfstate` 을 다운받아 소스 디렉토리에 `terraform.t
 
 ![Environment Variables](/assets/images/2020-05-20/new-workspace-03.png)
 
-마지막으로 `AWS Credentials` 을 입력합니다. 민감한 정보는 `Sensitive` 를 체크해 주도록 합니다.
+마지막으로 AWS 리소스 관리 권한 부여를 위해 `Variables` 탭에서 `AWS Credentials` 을 입력합니다. 민감한 정보는 `Sensitive` 를 체크해 주도록 합니다.
 
 ```hcl
 terraform {

@@ -18,7 +18,7 @@ header:
 
 ![DEMO Workspaces](/assets/images/2020-05-20/workspaces.png)
 
-Terraform Cloud 로 이전 했던 내용들을 공유 하려고 합니다.
+Terraform Cloud 로 이전 했던 내용들을 공유 합니다.
 
 # 연결 끊기
 

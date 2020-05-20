@@ -9,11 +9,11 @@ header:
 
 ![Unlimited Workspaces](/assets/images/2020-05-20/free.png)
 
-그래서 테스트용으로 관리/유지 하고 있던 코드를 Terraform Cloud 로 옮기는 작업을 했습니다.
+그래서 테스트용으로 관리/유지 하고 있던 코드를 `Terraform Cloud` 로 옮기는 작업을 했습니다.
 
 ![DEMO Workspaces](/assets/images/2020-05-20/workspaces.png)
 
-그래서 Cloud 로 이전 했던 내용들을 공유 하려고 합니다.
+Terraform Cloud 로 이전 했던 내용들을 공유 하려고 합니다.
 
 # 연결 끊기
 
@@ -126,7 +126,7 @@ Do you want to copy existing state to the new backend?
 
 ![PLANNED](/assets/images/2020-05-20/planned.png)
 
-`PLANNED` 상태가 되면 정상 입니다.
+변경된 내용이 없으므로 `PLANNED` 상태가 되면 정상 입니다.
 
 ```hcl
 data "terraform_remote_state" "vpc" {
@@ -152,7 +152,7 @@ data "terraform_remote_state" "vpc" {
 
 ![PLANNING](/assets/images/2020-05-20/planning.png)
 
-자동으로 Trigging 되어 plan 을 수행 합니다.
+자동으로 `Trigging` 되어 `terraform plan` 을 수행 합니다.
 
 ![PLANNED](/assets/images/2020-05-20/done.png)
 

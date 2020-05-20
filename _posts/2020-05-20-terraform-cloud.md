@@ -1,6 +1,9 @@
 ---
 title: "Terraform Cloud"
 date: 2020-05-20 13:12:45 +0900
+header:
+  image: /assets/images/2020-05-20/workspaces.png
+  og_image: /assets/images/2020-05-20/workspaces.png
 ---
 
 얼마전까지 [Terraform Cloud](https://app.terraform.io/) 에서 관리 할 수 있는 워크스페이스가 2개 인줄 알고 있었으나, 무료 사용의 경우도 무제한 이라고 합니다.

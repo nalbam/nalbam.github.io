@@ -7,9 +7,14 @@ header:
 
 얼마전까지 [Terraform Cloud](https://app.terraform.io/) 에서 관리 할 수 있는 워크스페이스가 2개 인줄 알고 있었으나, 무료 사용의 경우도 무제한 이라고 합니다.
 
+무료 요금제의 경우 팀원에 5명까지 넣을수 있습니다. 다만 모두 `owner` 권한 입니다.
+
+`$20/user` 요금제를 선택해야 권한 제어가 가능 하다고 합니다.
+그래도 소규모 팀에서는 권한제어가 되지 않아도 무제한 워크스페이스니 변경하는 것도 좋을것 같네요.
+
 ![Unlimited Workspaces](/assets/images/2020-05-20/free.png)
 
-그래서 테스트용으로 관리/유지 하고 있던 코드를 `Terraform Cloud` 로 옮기는 작업을 했습니다.
+그래서 테스트용으로 관리/유지 하던 코드를 `Terraform Cloud` 로 옮기는 작업을 했습니다.
 
 ![DEMO Workspaces](/assets/images/2020-05-20/workspaces.png)
 

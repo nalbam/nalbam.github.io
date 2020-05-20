@@ -2,7 +2,6 @@
 title: "Terraform Cloud"
 date: 2020-05-20 13:12:45 +0900
 header:
-  image: /assets/images/2020-05-20/workspaces.png
   og_image: /assets/images/2020-05-20/workspaces.png
 ---
 

@@ -2,7 +2,6 @@
 title: "AWS 클라우드, 라즈베리파이, 온도센서를 활용한 체온 알람 서비스"
 date: 2020-02-28 12:26:54 +0900
 header:
-  image: /assets/images/2020-02-28/doorman-ko.jpg
   og_image: /assets/images/2020-02-28/doorman-ko.jpg
 ---
 

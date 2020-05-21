@@ -1,6 +1,7 @@
 ---
+layout: post
 title: "GitHub Action 만들기"
-date: 2020-02-10 16:29:54 +0900
+tags: [github, github-action]
 ---
 
 GitHub Action 을 직접 작성하는 방법을 소개 합니다.

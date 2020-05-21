@@ -1,8 +1,9 @@
 ---
+layout: post
 title: "AWS 클라우드, 라즈베리파이, 온도센서를 활용한 체온 알람 서비스"
-date: 2020-02-28 12:26:54 +0900
 header:
   og_image: /assets/images/2020-02-28/doorman-ko.jpg
+tags: [thermal-camera, raspberry-pi, covid19]
 ---
 
 요즘 신종 코로나19(COVID-19) 로 인하여 국내외가 어지럽습니다. 한국에서도 많은 수의 확진자가 발생하고 있으며, 공항, 병원 등을 비롯한 많은 곳에 열감지 카메라들이 설치되고 있습니다. 하지만 많은 곳에서 카메라 옆에 사람이 상주하여 카메라를 계속 모니터링 하고있습니다.

@@ -3,7 +3,7 @@ layout: post
 title: "Body Temperature alarm service using AWS Cloud, Raspberry Pi and Thermal camera"
 header:
   og_image: /assets/images/2020-02-28/doorman.jpg
-tags: [thermal-camera, raspberry-pi, covid19]
+tags: [thermal-camera, raspberry-pi, covid-19]
 ---
 
 These days, the new corona 19 (COVID-19) is disturbing at home and abroad. There are a large number of confirmed patients in Korea, and thermal cameras are installed in many places, including airports and hospitals. But in many places camera people keep monitoring the camera.

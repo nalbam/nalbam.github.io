@@ -13,11 +13,11 @@
 # theme: type-on-strap
 # remote_theme: sylhare/Type-on-Strap
 
-# theme: "minimal-mistakes-jekyll"
+# theme: jekyll-theme-minimal
+
+theme: "minimal-mistakes-jekyll"
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
-theme: jekyll-theme-minimal
 
 # Site Settings
 locale: "en-US"

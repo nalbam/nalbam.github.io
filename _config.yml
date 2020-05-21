@@ -12,7 +12,7 @@ favicon: assets/images/favicon.ico
 
 # Header and footer text
 header_text: Well here it is.
-header_feature_image: assets/images/pexels/circuit.jpeg
+header_feature_image: assets/images/pexels/circuit.jpg
 footer_text: >
   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 

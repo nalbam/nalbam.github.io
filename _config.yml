@@ -8,7 +8,7 @@ description: "Well, here it is"
 # Meta
 avatar: assets/images/nalbam-2020.jpg
 color_image: /assets/images/lineart.png # In post when you set color
-favicon: assets/favicon.ico
+favicon: assets/images/favicon.ico
 
 # Header and footer text
 header_text: Well here it is.

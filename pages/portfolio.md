@@ -1,9 +1,9 @@
 ---
 layout: page
-title : Portfolio
+title: Portfolio
 permalink: /portfolio/
-subtitle: "Projects I am working on"
-feature-img: "assets/images/pexels/computer.jpeg"
+# subtitle: "Projects I am working on"
+feature-img: "assets/images/pexels/circuit.jpeg"
 hide: true
 ---
 

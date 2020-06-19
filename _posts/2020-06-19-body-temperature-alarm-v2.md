@@ -33,3 +33,11 @@ tags: [thermal-camera, raspberry-pi, covid-19]
 [AWS Amplify](https://aws.amazon.com/ko/amplify/) 프레임웍으로 작성된 [프론트 웹서비스](https://github.com/nalbam/doorman) 에서는 벡엔드로 부터 최근 접속했던 정보를 받아, 접속자의 최근 위치와 사진을 목록으로 보여줍니다.
 
 ![frontend](/assets/images/2020-06-19/frontend.jpg)
+
+자세한 코드는 [여기](https://github.com/nalbam/doorman)를 참고 하세요.
+
+## Architecture
+
+![doorman-arch](/assets/images/2020-06-19/doorman-arch.jpg)
+
+감사합니다.

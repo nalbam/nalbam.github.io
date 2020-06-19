@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Body Temperature alarm service using AWS Cloud, Raspberry Pi and Thermal camera"
+feature-img: /assets/images/2020-02-28/doorman.jpg
+thumbnail: /assets/images/2020-02-28/doorman.jpg
 header:
   og_image: /assets/images/2020-02-28/doorman.jpg
 tags: [thermal-camera, raspberry-pi, covid-19]

@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Terraform Cloud"
-feature-img: /assets/images/2020-05-20/workspaces.png
-# thumbnail: /assets/images/2020-05-20/workspaces.png
+feature-img: assets/images/2020-05-20/workspaces.png
+# thumbnail: assets/images/2020-05-20/workspaces.png
 header:
-  og_image: /assets/images/2020-05-20/workspaces.png
+  og_image: assets/images/2020-05-20/workspaces.png
 tags: [terraform]
 ---
 
@@ -15,11 +15,11 @@ tags: [terraform]
 `$20/user` 요금제를 선택해야 권한 제어가 가능 하다고 합니다.
 그래도 소규모 팀에서는 권한제어가 되지 않아도 무제한 워크스페이스니 변경하는 것도 좋을것 같네요.
 
-![Unlimited Workspaces](/assets/images/2020-05-20/free.png)
+![Unlimited Workspaces](assets/images/2020-05-20/free.png)
 
 그래서 테스트용으로 관리/유지 하던 코드를 `Terraform Cloud` 로 옮기는 작업을 했습니다.
 
-![DEMO Workspaces](/assets/images/2020-05-20/workspaces.png)
+![DEMO Workspaces](assets/images/2020-05-20/workspaces.png)
 
 Terraform Cloud 로 이전 했던 내용들을 공유 합니다.
 
@@ -65,7 +65,7 @@ S3 에서 `bastion.tfstate` 을 다운받아 소스 디렉토리에 `terraform.t
 
 이제 모든 원격 연결이 끊어졌습니다.
 
-![bastion offline](/assets/images/2020-05-20/bastion-offline.png)
+![bastion offline](assets/images/2020-05-20/bastion-offline.png)
 
 `terraform plan && terraform apply` 를 해도 변경 사항이 없다는 메세지가 출력 됩니다.
 
@@ -73,20 +73,20 @@ S3 에서 `bastion.tfstate` 을 다운받아 소스 디렉토리에 `terraform.t
 
 [Terraform Cloud](https://app.terraform.io/) 에 접속하여 Organization 을 생성 합니다.
 
-![New Organization](/assets/images/2020-05-20/new-organization.png)
+![New Organization](assets/images/2020-05-20/new-organization.png)
 
 저는 `mzcdev` 라고 하겠습니다.
 
-![New Workspace](/assets/images/2020-05-20/new-workspace-01.png)
+![New Workspace](assets/images/2020-05-20/new-workspace-01.png)
 
 새로운 워크스페이스를 만들기위해 Github repository 와 연결 합니다.
 
-![Configure settings](/assets/images/2020-05-20/new-workspace-02.png)
+![Configure settings](assets/images/2020-05-20/new-workspace-02.png)
 
 선택한 GitHub organization/repository 에 따라 자동으로 이름이 입력 되지만, 저는 `dev-bastion` 으로 변경 했습니다.
 코드 위치에 따라 `Advanced options` 에서 하위 디렉토리를 입력 할 수 있습니다.
 
-![Environment Variables](/assets/images/2020-05-20/new-workspace-03.png)
+![Environment Variables](assets/images/2020-05-20/new-workspace-03.png)
 
 마지막으로 AWS 리소스 관리 권한 부여를 위해 `Variables` 탭에서 `AWS Credentials` 을 입력합니다. 민감한 정보는 `Sensitive` 를 체크해 주도록 합니다.
 
@@ -122,17 +122,17 @@ Do you want to copy existing state to the new backend?
 
 `terraform init` 을 하면, local 의 states 를 remote 로 업로드 할 지 물어 봅니다.
 
-![States](/assets/images/2020-05-20/new-workspace-04.png)
+![States](assets/images/2020-05-20/new-workspace-04.png)
 
 `yes` 를 입력하면 업로드 되고, 웹콘솔에서 확인 할 수 있습니다.
 
 이제 코드를 `commit && push` 합니다.
 
-![Queue plan](/assets/images/2020-05-20/queue-plan.png)
+![Queue plan](assets/images/2020-05-20/queue-plan.png)
 
 `Queue plan` 을 실행해 봅니다.
 
-![PLANNED](/assets/images/2020-05-20/planned.png)
+![PLANNED](assets/images/2020-05-20/planned.png)
 
 변경된 내용이 없으므로 `PLANNED` 상태가 되면 정상 입니다.
 
@@ -158,11 +158,11 @@ data "terraform_remote_state" "vpc" {
 
 코드를 `commit && push` 합니다.
 
-![PLANNING](/assets/images/2020-05-20/planning.png)
+![PLANNING](assets/images/2020-05-20/planning.png)
 
 자동으로 `Trigging` 되어 `terraform plan` 을 수행 합니다.
 
-![PLANNED](/assets/images/2020-05-20/done.png)
+![PLANNED](assets/images/2020-05-20/done.png)
 
 `PLANNED` 상태가 되면 완료 입니다.
 

@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "GitHub Action 만들기"
-feature-img: /assets/images/2020-02-10/github-action-build.png
-# thumbnail: /assets/images/2020-02-10/github-action-build.png
 header:
   og_image: /assets/images/2020-02-10/github-action-build.png
 tags: [github, github-action]

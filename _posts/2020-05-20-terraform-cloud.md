@@ -2,10 +2,9 @@
 layout: post
 title: "Terraform Cloud"
 feature-img: /assets/images/2020-05-20/workspaces.png
-thumbnail: /assets/images/2020-05-20/workspaces.png
-# header:
-#   image: /assets/images/2020-05-20/workspaces.png
-#   og_image: /assets/images/2020-05-20/workspaces.png
+# thumbnail: /assets/images/2020-05-20/workspaces.png
+header:
+  og_image: /assets/images/2020-05-20/workspaces.png
 tags: [terraform]
 ---
 

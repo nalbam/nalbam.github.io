@@ -12,7 +12,7 @@ tags: [thermal-camera, raspberry-pi, covid-19]
 
 그래서 더 비싸고, 더 좋은 성능의 [FLIR Lepton 3.5](https://groupgets.com/manufacturers/flir/products/lepton-3-5) 로 업그레이드 하고, 라즈베리파이 4로 업그레이드 했습니다.
 
-![doorman](/assets/images/2020-06-19/doorman-v2.png)
+![doorman](/assets/images/2020-06-19/doorman-v2.jpg)
 
 ## Raspberry Pi
 

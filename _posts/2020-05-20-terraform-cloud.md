@@ -2,6 +2,7 @@
 layout: post
 title: "Terraform Cloud"
 header:
+  image: /assets/images/2020-05-20/workspaces.png
   og_image: /assets/images/2020-05-20/workspaces.png
 tags: [terraform]
 ---

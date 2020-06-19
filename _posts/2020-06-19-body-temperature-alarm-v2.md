@@ -2,6 +2,7 @@
 layout: post
 title: "AWS 클라우드, 라즈베리파이, 온도센서를 활용한 체온 알람 서비스 v2"
 header:
+  image: /assets/images/2020-06-19/doorman-v2.png
   og_image: /assets/images/2020-06-19/doorman-v2.png
 tags: [thermal-camera, raspberry-pi, covid-19]
 ---

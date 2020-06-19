@@ -2,6 +2,7 @@
 layout: post
 title: "GitHub Action 으로 빌드하기"
 header:
+  image: /assets/images/2020-02-10/github-action-build.png
   og_image: /assets/images/2020-02-10/github-action-build.png
 tags: [github, github-action]
 ---

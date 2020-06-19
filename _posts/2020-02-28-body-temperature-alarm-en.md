@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Body Temperature alarm service using AWS Cloud, Raspberry Pi and Thermal camera"
-feature-img: assets/images/2020-02-28/doorman.jpg
-# thumbnail: assets/images/2020-02-28/doorman.jpg
+feature-img: /assets/images/2020-02-28/doorman.jpg
+# thumbnail: /assets/images/2020-02-28/doorman.jpg
 header:
-  og_image: assets/images/2020-02-28/doorman.jpg
+  og_image: /assets/images/2020-02-28/doorman.jpg
 tags: [thermal-camera, raspberry-pi, covid-19]
 ---
 
@@ -12,7 +12,7 @@ These days, the new corona 19 (COVID-19) is disturbing at home and abroad. There
 
 As an IT developer, I have come to think that I want to create a service that makes notifications easier, faster and more accurate.
 
-![doorman](assets/images/2020-02-28/doorman.jpg)
+![doorman](/assets/images/2020-02-28/doorman.jpg)
 
 ## Thermal camera
 
@@ -20,7 +20,7 @@ Higher pixel count and better cameras are expensive, especially since they need 
 
 [Adafruit AMG8833 IR Thermal Camera Breakout](https://www.adafruit.com/product/3538)
 
-![amg8833](assets/images/2020-02-28/amg8833.jpg)
+![amg8833](/assets/images/2020-02-28/amg8833.jpg)
 
 [Sample code made with python + pygame.](https://learn.adafruit.com/adafruit-amg8833-8x8-thermal-camera-sensor/raspberry-pi-thermal-camera)
 
@@ -30,7 +30,7 @@ Initially, [AWS Deeplens](https://aws.amazon.com/ko/deeplens/) was considered, b
 
 Fortunately, the Raspberry Pi case was compatible with Lego, so the Raspberry camera and thermal camera could be installed on the Lego blocks.
 
-![raspberrypi](assets/images/2020-02-28/raspberrypi.jpg)
+![raspberrypi](/assets/images/2020-02-28/raspberrypi.jpg)
 
 I installed a python program on my Raspberry Pi and gave it permission to upload photos to the [Amazon S3](https://aws.amazon.com/ko/s3/).
 
@@ -40,7 +40,7 @@ For more code, please refer to [here](https://github.com/nalbam/rpi-doorman).
 
 In order to receive notifications from Slack, or to save usernames in Slack, Slack App was created according to [Settings](https://github.com/nalbam/deeplens-doorman/blob/master/README-slack.md).
 
-![slack-04](assets/images/2020-02-28/slack-04.png)
+![slack-04](/assets/images/2020-02-28/slack-04.png)
 
 ## Lambda Backend
 
@@ -61,12 +61,12 @@ Then, I used the 'Rest API' to search DynamoDB created in Backend, which I also 
 
 If the app doesn't know the name, it is saved as `Unknown`, and the form that stores the name is handled using [Amazon Cognito](https://aws.amazon.com/ko/cognito/). Amplify made it easy to apply the login and signup pages without coding them.
 
-![doorman-web](assets/images/2020-02-28/doorman-web.jpg)
+![doorman-web](/assets/images/2020-02-28/doorman-web.jpg)
 
 For more code, please refer to [here](https://github.com/nalbam/doorman).
 
 ## Architecture
 
-![doorman-arch](assets/images/2020-02-28/doorman-arch.jpg)
+![doorman-arch](/assets/images/2020-02-28/doorman-arch.jpg)
 
 Thanks for reading.

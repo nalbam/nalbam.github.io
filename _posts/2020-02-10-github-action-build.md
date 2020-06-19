@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "GitHub Action 으로 빌드하기"
-feature-img: assets/images/2020-02-10/github-action-build.png
-# thumbnail: assets/images/2020-02-10/github-action-build.png
+feature-img: /assets/images/2020-02-10/github-action-build.png
+# thumbnail: /assets/images/2020-02-10/github-action-build.png
 header:
-  og_image: assets/images/2020-02-10/github-action-build.png
+  og_image: /assets/images/2020-02-10/github-action-build.png
 tags: [github, github-action]
 ---
 
@@ -57,11 +57,11 @@ jobs: # Job 설정
 
 Action 코드를 Push 하기전 (필요하다면) GitHub > Setings > Secrets 에 사용자 정의 secret 을 입력 합니다.
 
-![guthub-secrets](assets/images/2020-02-10/github-secrets.png)
+![guthub-secrets](/assets/images/2020-02-10/github-secrets.png)
 
 이제 Action 코드를 Push 하면 바로 빌드가 시작 됩니다.
 
-![guthub-action-build](assets/images/2020-02-10/github-action-build.png)
+![guthub-action-build](/assets/images/2020-02-10/github-action-build.png)
 
 이 Action 에서는 사용자 정의 Action step 을 사용 했습니다.
 다음 포스트에서 사용자 정의 Action 을 만드는 방법을 소개 하겠습니다.

@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "AWS 클라우드, 라즈베리파이, 온도센서를 활용한 체온 알람 서비스"
-feature-img: assets/images/2020-02-28/doorman-ko.jpg
-# thumbnail: assets/images/2020-02-28/doorman-ko.jpg
+feature-img: /assets/images/2020-02-28/doorman-ko.jpg
+# thumbnail: /assets/images/2020-02-28/doorman-ko.jpg
 header:
-  og_image: assets/images/2020-02-28/doorman-ko.jpg
+  og_image: /assets/images/2020-02-28/doorman-ko.jpg
 tags: [thermal-camera, raspberry-pi, covid-19]
 ---
 
@@ -12,7 +12,7 @@ tags: [thermal-camera, raspberry-pi, covid-19]
 
 저는 IT 개발자로서 알고있는 지식으로 더 편하고, 빠르고, 정확하게 판단하고 알려주는 서비스를 만들고 싶다는 생각을 하게 되었습니다.
 
-![doorman](assets/images/2020-02-28/doorman.jpg)
+![doorman](/assets/images/2020-02-28/doorman.jpg)
 
 ## Thermal camera
 
@@ -20,7 +20,7 @@ tags: [thermal-camera, raspberry-pi, covid-19]
 
 AMG8833 센서를 부착한 [Adafruit AMG8833 IR Thermal Camera Breakout](http://www.devicemart.co.kr/goods/view?no=12382843) 입니다.
 
-![amg8833](assets/images/2020-02-28/amg8833.jpg)
+![amg8833](/assets/images/2020-02-28/amg8833.jpg)
 
 [python + pygame 으로 만든 샘플 코드 입니다.](https://learn.adafruit.com/adafruit-amg8833-8x8-thermal-camera-sensor/raspberry-pi-thermal-camera)
 
@@ -31,7 +31,7 @@ AMG8833 센서를 부착한 [Adafruit AMG8833 IR Thermal Camera Breakout](http:/
 
 다행이도 라즈베리파이 케이스가 레고호환이어서 라즈베리 카메라와 열감지 카메라를 레고 거치대에 설치할 수 있었습니다.
 
-![raspberrypi](assets/images/2020-02-28/raspberrypi.jpg)
+![raspberrypi](/assets/images/2020-02-28/raspberrypi.jpg)
 
 라즈베리파이에 python 으로 된 프로그램을 설치하고, [Amazon S3](https://aws.amazon.com/ko/s3/) Bucket 에 사진을 업로드 할수 있는 권한도 부여 했습니다.
 
@@ -41,7 +41,7 @@ AMG8833 센서를 부착한 [Adafruit AMG8833 IR Thermal Camera Breakout](http:/
 
 슬랙에 알림을 받거나, 슬랙에서 사용자 이름을 지정 하기 위하여 [설정법](https://github.com/nalbam/deeplens-doorman/blob/master/README-slack.md) 에 따라 Slack App 을 만들어 줬습니다.
 
-![slack-04](assets/images/2020-02-28/slack-04.png)
+![slack-04](/assets/images/2020-02-28/slack-04.png)
 
 ## Lambda Backend
 
@@ -62,12 +62,12 @@ Forntend 는 `Javascript` 와 `React` 를 사용 했습니다.
 
 인식은 하였으나 이름을 모르는 사람은 `Unknown` 으로 저장 하였고, 이름을 저장 하는 폼을 위해 [Amazon Cognito](https://aws.amazon.com/ko/cognito/) 를 사용해서 인증을 처리 했습니다. Amplify 를 통해 손 쉽게 로그인 및 가입 페이지를 직접 코딩하지 않고도 적용할 수 있었습니다.
 
-![doorman-web](assets/images/2020-02-28/doorman-web.jpg)
+![doorman-web](/assets/images/2020-02-28/doorman-web.jpg)
 
 자세한 코드는 [여기](https://github.com/nalbam/doorman)를 참고 하세요.
 
 ## Architecture
 
-![doorman-arch](assets/images/2020-02-28/doorman-arch.jpg)
+![doorman-arch](/assets/images/2020-02-28/doorman-arch.jpg)
 
 감사합니다.

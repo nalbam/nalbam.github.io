@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "AWS 클라우드, 라즈베리파이, 온도센서를 활용한 체온 알람 서비스 v2"
-feature-img: assets/images/2020-06-19/doorman-v2.png
-# thumbnail: assets/images/2020-06-19/doorman-v2.png
+feature-img: /assets/images/2020-06-19/doorman-v2.png
+# thumbnail: /assets/images/2020-06-19/doorman-v2.png
 header:
-  og_image: assets/images/2020-06-19/doorman-v2.png
+  og_image: /assets/images/2020-06-19/doorman-v2.png
 tags: [thermal-camera, raspberry-pi, covid-19]
 ---
 
@@ -14,7 +14,7 @@ tags: [thermal-camera, raspberry-pi, covid-19]
 
 그래서 더 비싸고, 더 좋은 성능의 [FLIR Lepton 3.5](https://groupgets.com/manufacturers/flir/products/lepton-3-5) 로 업그레이드 하고, 라즈베리파이 4로 업그레이드 했습니다.
 
-![doorman](assets/images/2020-06-19/doorman-v2.jpg)
+![doorman](/assets/images/2020-06-19/doorman-v2.jpg)
 
 ## Raspberry Pi
 
@@ -32,4 +32,4 @@ tags: [thermal-camera, raspberry-pi, covid-19]
 
 [AWS Amplify](https://aws.amazon.com/ko/amplify/) 프레임웍으로 작성된 [프론트 웹서비스](https://github.com/nalbam/doorman) 에서는 벡엔드로 부터 최근 접속했던 정보를 받아, 접속자의 최근 위치와 사진을 목록으로 보여줍니다.
 
-![frontend](assets/images/2020-06-19/frontend.jpg)
+![frontend](/assets/images/2020-06-19/frontend.jpg)

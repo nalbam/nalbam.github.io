@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "GitHub Action 만들기"
-feature-img: assets/images/2020-02-10/github-action-build.png
-# thumbnail: assets/images/2020-02-10/github-action-build.png
+feature-img: /assets/images/2020-02-10/github-action-build.png
+# thumbnail: /assets/images/2020-02-10/github-action-build.png
 header:
-  og_image: assets/images/2020-02-10/github-action-build.png
+  og_image: /assets/images/2020-02-10/github-action-build.png
 tags: [github, github-action]
 ---
 
@@ -86,7 +86,7 @@ aws s3 sync ${FROM_PATH} ${DEST_PATH} ${OPTIONS}
 Action 코드를 실행 하기전 GitHub > Setings > Secrets 에 사용자 정의 secret 을 입력 합니다.
 이번 Action 은 `AWS_ACCESS_KEY_ID` 과 `AWS_SECRET_ACCESS_KEY` 이 필요 합니다.
 
-![guthub-secrets](assets/images/2020-02-10/github-secrets.png)
+![guthub-secrets](/assets/images/2020-02-10/github-secrets.png)
 
 ```yaml
 # .github/workflows/push.yml

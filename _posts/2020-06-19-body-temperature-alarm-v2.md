@@ -34,8 +34,6 @@ tags: [thermal-camera, raspberry-pi, covid-19]
 
 ![frontend](/assets/images/2020-06-19/frontend.jpg)
 
-자세한 코드는 [여기](https://github.com/nalbam/doorman)를 참고 하세요.
-
 ## Architecture
 
 ![doorman-arch](/assets/images/2020-06-19/doorman-arch.jpg)

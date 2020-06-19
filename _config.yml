@@ -1,17 +1,16 @@
 # SITE CONFIGURATION
 baseurl: ""
 url: "https://nalbam.github.io/"
-title: "nalbam's blog"
-description: "Well, here it is"
 
 # THEME-SPECIFIC CONFIGURATION
-# Meta
+title: "nalbam's blog"
+description: "Well, here it is"
 avatar: assets/images/nalbam-2020.jpg
 color_image: /assets/images/lineart.png # In post when you set color
 favicon: assets/images/favicon.ico
 
 # Header and footer text
-header_text: Burung Burung.
+header_text: Burung Burung
 header_feature_image: assets/images/nalbam-2020.jpg
 footer_text: >
   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
@@ -46,7 +45,7 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
-plugins: [jekyll-paginate, jekyll-seo-tag]
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
 exclude:
   [
     ".jekyll-cache",

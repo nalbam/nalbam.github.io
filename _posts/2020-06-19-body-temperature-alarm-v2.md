@@ -30,9 +30,15 @@ tags: [thermal-camera, raspberry-pi, covid-19]
 
 ## Amplify Frontend
 
-[AWS Amplify](https://aws.amazon.com/ko/amplify/) 프레임웍으로 작성된 [프론트 웹서비스](https://github.com/nalbam/doorman) 에서는 벡엔드로 부터 최근 접속했던 정보를 받아, 접속자의 최근 위치와 사진을 목록으로 보여줍니다.
+[AWS Amplify](https://aws.amazon.com/ko/amplify/) 프레임웍으로 작성된 [프론트 웹서비스](https://github.com/nalbam/doorman) 에서는 벡엔드로 부터 최근 접속했던 정보를 받아, 방문자의 정보를 보여줍니다.
 
 ![frontend](/assets/images/2020-06-19/frontend.jpg)
+
+## Purpose
+
+하드웨어 업데이트와 함께 소프트웨어도 변경 했습니다.
+
+여러위치에 기기를 설치 할 수 있도록 변경 했습니다. 온도와 체온사진 및 일반사진을 각각의 위치 정보와 함께 기록 합니다. 일반사진을 안면인식을 통해 방문자 별로 기록하고, 현재 방문자가 최근 한달 이내에 어디에 방문했는지 확인 할 수 있습니다.
 
 ## Architecture
 

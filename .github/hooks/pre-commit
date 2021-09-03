@@ -8,10 +8,10 @@
 # If it's on the right directory, proceed. Else, try to fix it. If fail, abort commit.
 if [ ${PWD##*/} != "lib" ] ; then
     cd lib || exit 1
-fi 
+fi
 
 # If gulp is intalled and gulpfile.js is present, then proceed. Else, abort commit.
-if ! [ -f "gulpfile.js" ] || ! command -v gulp; then  
+if ! [ -f "gulpfile.js" ] || ! command -v gulp; then
     printf "gulpfile.js not found or gulp-cli not installed!\n"
     exit 1
 fi
@@ -25,4 +25,3 @@ fi
 
 # Proceed with the commit.
 exit 0
-

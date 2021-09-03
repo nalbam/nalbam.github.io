@@ -86,7 +86,7 @@ RUN docker buildx version
 
 ## Github Action
 
-* https://github.com/marketplace/actions/docker-push
+* [Docker Push :: Github Action](https://github.com/marketplace/actions/docker-push) [![GitHub Releases](https://img.shields.io/github/release/opspresso/action-docker.svg)](https://github.com/opspresso/action-docker/releases)
 
 Docker Hub, AWS ECR (Private, Public), Quay.io, Github Package 에서 테스트 되었어요.
 
@@ -113,8 +113,8 @@ jobs:
         with:
           args: --docker
         env:
-          USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          USERNAME: secrets.DOCKER_USERNAME
+          PASSWORD: secrets.DOCKER_PASSWORD
           TAG_NAME: "v0.0.1"
           BUILDX: "true"
 
@@ -123,8 +123,8 @@ jobs:
         with:
           args: --docker
         env:
-          USERNAME: ${{ secrets.QUAY_USERNAME }}
-          PASSWORD: ${{ secrets.QUAY_PASSWORD }}
+          USERNAME: secrets.QUAY_USERNAME
+          PASSWORD: secrets.QUAY_PASSWORD
           REGISTRY: "quay.io"
           TAG_NAME: "v0.0.1"
           BUILDX: "true"
@@ -134,7 +134,7 @@ jobs:
         with:
           args: --docker
         env:
-          PASSWORD: ${{ secrets.GHP_TOKEN }}
+          PASSWORD: secrets.GHP_TOKEN
           REGISTRY: "docker.pkg.github.com"
           TAG_NAME: "v0.0.1"
 
@@ -143,8 +143,8 @@ jobs:
         with:
           args: --ecr
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_BRUCE }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_BRUCE }}
+          AWS_ACCESS_KEY_ID: secrets.AWS_ACCESS_KEY_ID
+          AWS_SECRET_ACCESS_KEY: secrets.AWS_SECRET_ACCESS_KEY
           AWS_REGION: "ap-northeast-2"
           TAG_NAME: "v0.0.1"
           BUILDX: "true"
@@ -154,8 +154,8 @@ jobs:
         with:
           args: --ecr
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: secrets.AWS_ACCESS_KEY_ID
+          AWS_SECRET_ACCESS_KEY: secrets.AWS_SECRET_ACCESS_KEY
           AWS_REGION: "ap-northeast-2"
           REGISTRY: "public.ecr.aws/nalbam"
           TAG_NAME: "v0.0.1"

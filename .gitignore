@@ -1,36 +1,36 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Idea
+.idea/*
 
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows shortcuts
-*.lnk
-
-# Mac
+# Mac OS
 .DS_Store
 
-# java
-*.class
-*.jar
-*.war
-*.ear
+# Byte-compiled / optimized / DLL files
+*.manifest
+*.spec
 
-# maven
-target/
-build/
+# Jekyll dev or build
+_site/*
+_development_tool/*
+.sass-cache/*
+*.css.map
+*.scssc
+.bundle/*
+/vendor/
+.jekyll-cache/*
+*/.jekyll-cache/*
 
-# eclipse
-.settings/
-.metadata/
+# Theme Gem
+Gemfile.lock
+*.gem
+.gems
+jekyll-theme-type-on-strap.gemspec
 
-# JetBrains
-.idea/
-*.iml
+# Node.js
+**/node_modules/*
+**/package-lock.json
 
-# log
-*.log
+# Misc
+*-test.md
+*copy.md
+test/*
+/type-on-strap*/*

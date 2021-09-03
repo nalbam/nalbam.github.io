@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Gallery
-permalink: /gallery/
 # subtitle: From the pexels folder
+permalink: /gallery/
 gallery_path: "assets/images/pexels"
-hide: true
+tags: [Page]
 ---
 
 {% include gallery.html gallery_path=page.gallery_path %}

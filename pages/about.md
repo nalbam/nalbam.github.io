@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 feature-img: "assets/images/pexels/circuit.jpg"
-hide: true
+tags: [Page]
 ---
 
-Megazone Cloud / DevOps Engineer / SRE / Solutions Architect / AWS DeepRacer Championship 2019 Finalist.
+DevOps Engineer / SRE / AWS ML Hero / AWS DeepRacer Championship 2019,2020 Finalist.

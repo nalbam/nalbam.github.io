@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: ""
-url: "https://nalbam.github.io"
+url: "https://nalbam.github.io/"
 
 # THEME-SPECIFIC CONFIGURATION
 title: "nalbam's blog"

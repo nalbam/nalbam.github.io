@@ -78,11 +78,11 @@ RUN docker buildx version
 
 [도커 허브](https://hub.docker.com/repository/docker/nalbam/sample-node/tags?page=1&ordering=last_updated)에 올라간 이미지에요.
 
-![docker-hub](/assets/images/2021-09-03/docker-hub.png)
+![docker-hub](/assets/images/2021-09-03/hub.png)
 
 `AWS ECR `에 올라간 이미지 에요. (untagged 도 생기더라고요.)
 
-![aws-ecr](/assets/images/2021-09-03/aws-ecr.png)
+![aws-ecr](/assets/images/2021-09-03/ecr.png)
 
 ## Github Action
 
@@ -270,7 +270,7 @@ Removing login credentials for https://index.docker.io/v1/
 
 Amazon EKS `1.21` 에 인스턴스 타입이 `c6g.large` 인 nodegroup `graviton` 을 만들고 `taints` 를 걸어 주었어요.
 
-![kubectl-get-node](/assets/images/2021-09-03/kubectl-get-node.png)
+![kubectl-get-node](/assets/images/2021-09-03/node.png)
 
 그리고 해당 노드그룹에 배포 했을때, 아키텍처에 맞는 image 를 pull 도 잘 하고 실행도 잘 되었어요.
 

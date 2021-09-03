@@ -1,8 +1,8 @@
 ---
 layout: page
-title: About
 permalink: /about/
-feature-img: "assets/images/pexels/circuit.jpg"
+title: About
+feature-img: "assets/images/pexels/mgm_grand_arena.jpg"
 tags: [Page]
 ---
 

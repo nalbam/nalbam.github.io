@@ -14,7 +14,7 @@ tags: [docker, buildx, multi, architecture, amd64, arm64]
 
 첫번째 방법은 `docker manifest` 를 이용하는 방법 이에요. docker build 를 각 arch 별로 진행하고, manifest 로 묶어주는 방법 이에요.
 
-> 그런데 사실… 잘 안되더라고요…. 뭘 잘못 한거지…
+> 각각 빌드하고, manifest 로 묶어주는 작업이 필요 하더라고요.
 
 ```bash
 # AMD64

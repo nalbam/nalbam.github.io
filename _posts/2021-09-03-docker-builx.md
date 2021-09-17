@@ -281,6 +281,7 @@ metadata:
   labels:
     app: sample-node
     app.kubernetes.io/instance: sample-node-eks-demo
+    app.kubernetes.io/name: sample-node
     version: v0.8.56
   name: sample-node
   namespace: default

@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Docker builx - multi architecture"
-feature-img: /assets/images/2020-05-20/workspaces.png
-# thumbnail: /assets/images/2020-05-20/workspaces.png
+feature-img: /assets/images/2021-09-03/hub.png
+# thumbnail: /assets/images/2021-09-03/hub.png
 header:
-  og_image: /assets/images/2020-05-20/workspaces.png
+  og_image: /assets/images/2021-09-03/hub.png
 tags: [docker, buildx, multi, architecture, amd64, arm64]
 ---
 

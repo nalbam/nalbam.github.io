@@ -20,7 +20,7 @@ Meanwhile, I moved my job to MegazoneCloud, and I supported the league as a PitB
 
 And test...
 
-![]({https://www.youtube.com/watch?v=7Ek1N-6c0bQ})
+{% include youtube.html id="7Ek1N-6c0bQ" %}
 
 However, when I directly connected the sensor with Raspberry Pi, there were times when it was caught in the rear wheel or when it wasn't, as it is shown in the third attempt of the video.
 
@@ -36,7 +36,7 @@ However, there were two more problems that occurred. The first problem is that t
 
 ![track](/assets/images/2019-11-07/track.jpg)
 
-![]({https://www.youtube.com/watch?v=E9f_TfVdgaY})
+{% include youtube.html id="E9f_TfVdgaY" %}
 
 Eventhough I used RJ45, LAN 20m, it worked very well.
 

@@ -20,8 +20,7 @@ Meanwhile, I moved my job to MegazoneCloud, and I supported the league as a PitB
 
 And test...
 
-https://www.youtube.com/watch?v=7Ek1N-6c0bQ
-
+![]({https://www.youtube.com/watch?v=7Ek1N-6c0bQ})
 
 However, when I directly connected the sensor with Raspberry Pi, there were times when it was caught in the rear wheel or when it wasn't, as it is shown in the third attempt of the video.
 
@@ -37,8 +36,7 @@ However, there were two more problems that occurred. The first problem is that t
 
 ![track](/assets/images/2019-11-07/track.jpg)
 
-https://www.youtube.com/watch?v=E9f_TfVdgaY
-
+![]({https://www.youtube.com/watch?v=E9f_TfVdgaY})
 
 Eventhough I used RJ45, LAN 20m, it worked very well.
 
@@ -55,7 +53,7 @@ git clone https://github.com/nalbam/deepracer-timer
 ./deepracer-timer/run.sh init
 ```
 
-You can now access http://localhost:3000 in your RaspberryPi's browser.
+You can now access [http://localhost:3000](http://localhost:3000) in your RaspberryPi's browser.
 
 It can be controlled by clicking the button at the top of the screen with the mouse or keyboard. The keys, Q, W, E, R, and T on the keyboard are mapped to the Start, Pause, Passed, Reset and Clear buttons. The hidden key, Y, adds the last lap time to the current time. It is to resolve the problem when all four wheels of the DeepRacer get detached and the sensor is operated without stopping.
 
@@ -64,13 +62,15 @@ You can do the DeepRacer Timer on-line test it here except Sensor.
 Listed below are the leaderboards of the league, sponsored by MegazoneCloud and supported by me as a PitBoss.
 
 [AWS Cloud Day - Busan](https://dracer.io/league/busan-1909)
+
 [SOSCON 2019 ROBOT MOBILITY](https://dracer.io/league/soscon-2019)
+
 [AWS Startup DeepRacer League](https://dracer.io/league/startup-2019)
 
 Also, listed below are some of the codes that I have created while doing the DeepRacer. I hope these will help you when you try participating in the DeepRacer training or DeepRacer leagues.
 
-DeepRacer timer and leaderboard: https://github.com/nalbam/deepracer-timer
+[DeepRacer timer and leaderboard](https://github.com/nalbam/deepracer-timer)
 
-DeepRacer online league point collector and leaderboard: https://github.com/nalbam/deepracer-league
+[DeepRacer online league point collector and leaderboard](https://github.com/nalbam/deepracer-league)
 
-DeepRacer online league auto submit bot: https://github.com/nalbam/deepracer-submit
+[DeepRacer online league auto submit bot](https://github.com/nalbam/deepracer-submit)

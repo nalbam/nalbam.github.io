@@ -1,57 +1,56 @@
-# SITE CONFIGURATION
-baseurl: ""
+site: Personal Jekyll Theme
+
 url: "https://nalbam.github.io/"
+baseurl: ""
 
-# THEME-SPECIFIC CONFIGURATION
-title: "nalbam's blog"
-description: "Well, here it is"
-avatar: assets/images/nalbam-2020.jpg
-favicon: assets/images/favicon.ico
-
-# Header and footer text
-header_text: Burung Burung
-header_feature_image: assets/images/nalbam-2020.jpg
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
-
-# Blog
-excerpt: true # truncate
-                                 # Or "truncate" (first 250 characters), "false" to disable
-post_navigation: true
-color_image: assets/images/lineart.png                  # A bit transparent for color posts.
-
-# Features
-# More in the _data folder for share buttons, author and language
-# For layout customization, go to the "_sass > base" folder, and check "_variables.scss"
-katex: true                                             # Enable if using math markup
-mermaid: true                                           # Enable mermaid-js for sequence and diagrams
-google_analytics: "UA-41833494-15"                      # Tracking ID, e.g. "UA-000000-01"
-cookie_consent: false                                   # To respect the usage of cookies
-color_theme: auto                                       # auto, dark or light
-
-# Comments
-comments:
-  disqus_shortname:                                     # Your discus shortname for comments
-  cusdis_app_id:                                        # Your cusdis data-app-id
-  utterances:                                           # Enable by filling below information. For more info, go to https://utteranc.es
-    repo:                                               # your public comments repository (e.g. owner/repo)
-    issue-term:                                         # Issue term (e.g. "comment" consider issues with this word in the title as comments)
-
-# PAGINATION
-paginate: 10
-paginate_path: "/blog/page:num"
-
-# PORTFOLIO
 collections:
-  portfolio:
+  pages:
     output: true
-    permalink: /:collection/:name
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /blog/:slug
+  projects:
+    output: true
+    permalink: /project/:slug
 
-# BUILD SETTINGS
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 sass:
   style: compressed
-plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
-exclude: [".jekyll-cache", ".idea", "vendor/*", "assets/node_modules/*"]
 
-# theme: type-on-strap                                  # if using the theme as a jekyll theme gem
-remote_theme: sylhare/Type-on-Strap                     # If using as a remote_theme in github
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+paginate: 6
+paginate_path: "/blog/page:num/"

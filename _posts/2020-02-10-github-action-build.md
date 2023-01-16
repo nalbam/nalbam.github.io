@@ -36,7 +36,7 @@ jobs: # Job 설정
 
     steps: # steps
       - name: Checkout # 첫번째 step
-        uses: actions/checkout@v2 # 소소를 가져 온다
+        uses: actions/checkout@v3 # 소소를 가져 온다
 
       - name: Setup Node # 두번째 step
         uses: actions/setup-node@v1 # node 컨테이너를 setup 한다

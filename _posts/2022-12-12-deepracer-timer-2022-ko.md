@@ -14,7 +14,7 @@ tags: [deepracer, timer, sensor]
 
 그리고 AWS re:Invent 2022 의 딥레이서 공식 경기에서 이 타이머가 사용되었습니다.
 
-아래 사진은 2019년에 만든 타이머와 2022년의 타이머를 비교한 것입니다.
+아래 사진은 2019년에 제가 만든 타이머와 2022년에 AWS 가 만든 타이머를 비교한 사진입니다.
 
 ![Pressure Sensor](/assets/images/2022-12-12/timer-2022-01.png)
 

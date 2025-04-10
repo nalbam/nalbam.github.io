@@ -18,6 +18,7 @@ _development_tool/*
 /vendor/
 .jekyll-cache/*
 */.jekyll-cache/*
+.jekyll-metadata
 
 # Theme Gem
 Gemfile.lock
@@ -28,6 +29,10 @@ jekyll-theme-type-on-strap.gemspec
 # Node.js
 **/node_modules/*
 **/package-lock.json
+
+# Ruby
+.ruby-version
+.ruby-gemset
 
 # Misc
 *-test.md

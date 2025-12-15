@@ -9,7 +9,7 @@ avatar: assets/images/nalbam-2022.png
 favicon: assets/images/favicon.ico
 
 # Header and footer text
-header_text: But Not Today
+header_text: "Why Not?"
 header_feature_image: assets/images/nalbam-cover.png
 footer_text: >
   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>

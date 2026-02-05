@@ -4,7 +4,7 @@ Git hooks are provided in `hooks/`. The pre-commit hook, when enabled, will chec
 
 ## Setup
 
-`ln lib/hooks/pre-commit .git/hooks/pre-commit`
+`ln .github/hooks/pre-commit .git/hooks/pre-commit`
 
 ## Bypass
 

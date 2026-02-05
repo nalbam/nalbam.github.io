@@ -15,9 +15,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   /*
    * Make the header images move on scroll
+   * Start from top, move slightly on scroll
    */
   window.addEventListener('scroll', function () {
-    var offset = -(window.scrollY || window.pageYOffset || document.body.scrollTop) / 3;
-    document.getElementById("main").style.backgroundPosition = '100% ' + (offset - 50) + 'px' + ', 0%, center top';
+    var offset = -(window.scrollY || window.pageYOffset || document.body.scrollTop) / 5;
+    document.getElementById("main").style.backgroundPosition = 'center ' + offset + 'px';
   });
 });

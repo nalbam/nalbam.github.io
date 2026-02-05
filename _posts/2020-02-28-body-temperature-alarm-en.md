@@ -8,9 +8,9 @@ header:
 tags: [thermal-camera, raspberry-pi, covid-19]
 ---
 
-These days, the new corona 19 (COVID-19) is disturbing at home and abroad. There are a large number of confirmed patients in Korea, and thermal cameras are installed in many places, including airports and hospitals. But in many places camera people keep monitoring the camera.
+These days, the novel coronavirus (COVID-19) is causing turmoil both domestically and internationally. A large number of confirmed cases have emerged in Korea, and thermal cameras are being installed in many places, including airports and hospitals. However, in many locations, staff must be stationed next to the cameras to monitor them constantly.
 
-As an IT developer, I have come to think that I want to create a service that makes notifications easier, faster and more accurate.
+As an IT developer, I wanted to create a service that could judge and notify more conveniently, quickly, and accurately using my knowledge.
 
 ![doorman](/assets/images/2020-02-28/doorman.jpg)
 
@@ -53,13 +53,13 @@ For more code, please refer to [here](https://github.com/nalbam/deeplens-doorman
 
 ## Amplify Frontend
 
-Web-based service for names and photos stored in DynamoDB.
+Names and photos stored in DynamoDB are served through the web.
 This app was developed and distributed using [AWS Amplify](https://aws.amazon.com/ko/amplify/).
 
-Forntend used `Javascript` and` React`.
-Then, I used the 'Rest API' to search DynamoDB created in Backend, which I also created with the `AWS Lambda Function`.
+Frontend used `Javascript` and `React`.
+Then, I used the `Rest API` to query DynamoDB created in Backend, which was also created with `AWS Lambda Function`.
 
-If the app doesn't know the name, it is saved as `Unknown`, and the form that stores the name is handled using [Amazon Cognito](https://aws.amazon.com/ko/cognito/). Amplify made it easy to apply the login and signup pages without coding them.
+People who were recognized but whose names were unknown were saved as `Unknown`. Authentication for the name input form was handled using [Amazon Cognito](https://aws.amazon.com/cognito/). Amplify made it easy to apply login and signup pages without coding them directly.
 
 ![doorman-web](/assets/images/2020-02-28/doorman-web.jpg)
 

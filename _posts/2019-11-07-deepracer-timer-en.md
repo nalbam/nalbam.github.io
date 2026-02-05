@@ -22,29 +22,39 @@ And test...
 
 {% include youtube.html id="7Ek1N-6c0bQ" %}
 
-However, when I directly connected the sensor with Raspberry Pi, there were times when it was caught in the rear wheel or when it wasn't, as it is shown in the third attempt of the video.
+At the end of the video, my MacBook... 😱
+
+However, when I directly connected the sensor with Raspberry Pi, there were times when it was caught in the rear wheel or when it wasn't, as shown in the third attempt of the video.
 
 ![timer](/assets/images/2019-11-07/timer.png)
 
-I had to measure the sensitivity of the pressure sensor, but in order to do that, I thought it would be good to have an analog-to-digital converter in it, so I took the microphone off the Sound Sensor and connected the pressure sensor to it.
+The lap time wasn't recorded even though the front wheel stepped on the sensor.
+
+I had to measure the sensitivity of the pressure sensor, and for that, I thought it would be good to have an analog-to-digital converter. So I took the microphone off the [Sound Sensor](https://www.eleparts.co.kr/goods/view?no=3001790) and connected the pressure sensor to it.
 
 ![Sound Sensor](/assets/images/2019-11-07/sound-sensor.jpg)
 
 The result was successful then I've decided to apply it to the actual competition.
 
-However, there were two more problems that occurred. The first problem is that the width of the DeepRacer track was 60 cm, but the width of the sensor was only 40 cm, so I had to connect two sensors. Also, since it did not operate when the distance between the sensor and the converter was too far, I set the distance between the sensor and the converter at less than 1 meter, and connected the converter and Raspberry Pi using RJ45 connector. Also I installed and tested in AWS Startup DeepRacer League.
+However, two more problems occurred. First, the DeepRacer track width is 60 cm, but the sensor was only 40 cm, so I had to connect two sensors. Also, it didn't work when the distance between the sensor and converter was too far. So I kept the sensor-to-converter distance within 1 meter and connected the converter to the Raspberry Pi using an RJ45 cable.
+
+On October 30, 2019, I installed and tested it at the AWS Startup DeepRacer League.
 
 ![track](/assets/images/2019-11-07/track.jpg)
 
+Two sensors attached to the start line with double-sided tape.
+
 {% include youtube.html id="E9f_TfVdgaY" %}
 
-Eventhough I used RJ45, LAN 20m, it worked very well.
+Even though I used a 20m RJ45 LAN cable, it worked very well.
 
 This is the way how to connect the DeepRacer timer to the sensor.
 
 ![rpi1](/assets/images/2019-11-07/rpi1.jpg)
 
 ![rpi2](/assets/images/2019-11-07/rpi2.jpg)
+
+Soldering for the first time in years.
 
 The converter has 4 pins, VCC, GND, AOUT, and DOUT. VCC was connected to Raspberry Pi's 3V, and GND to GND. AOUT was not used, and DOUT was connected to pins 11 and 13 of Raspberry Pi, respectively. Then, I accessed to Raspberry Pi with SSH, cloned the DeepRacer timer source, and ran the start shell.
 
@@ -57,7 +67,7 @@ You can now access [http://localhost:3000](http://localhost:3000) in your Raspbe
 
 It can be controlled by clicking the button at the top of the screen with the mouse or keyboard. The keys, Q, W, E, R, and T on the keyboard are mapped to the Start, Pause, Passed, Reset and Clear buttons. The hidden key, Y, adds the last lap time to the current time. It is to resolve the problem when all four wheels of the DeepRacer get detached and the sensor is operated without stopping.
 
-You can do the DeepRacer Timer on-line test it here except Sensor.
+You can test the DeepRacer Timer online here, excluding the sensor functionality.
 
 Listed below are the leaderboards of the league, sponsored by MegazoneCloud and supported by me as a PitBoss.
 

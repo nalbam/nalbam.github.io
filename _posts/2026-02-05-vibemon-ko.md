@@ -170,6 +170,7 @@ status = {
 - **Database**: AWS DynamoDB (Single Table Design)
 - **Real-time**: WebSocket
 - **Infrastructure**: Terraform (API Gateway, Lambda)
+- **Hosting**: AWS Amplify
 
 ### 아키텍처
 

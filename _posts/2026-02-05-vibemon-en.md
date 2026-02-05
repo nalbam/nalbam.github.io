@@ -170,6 +170,7 @@ Using only locally felt limiting. I wanted to see AI agent status from multiple 
 - **Database**: AWS DynamoDB (Single Table Design)
 - **Real-time**: WebSocket
 - **Infrastructure**: Terraform (API Gateway, Lambda)
+- **Hosting**: AWS Amplify
 
 ### Architecture
 

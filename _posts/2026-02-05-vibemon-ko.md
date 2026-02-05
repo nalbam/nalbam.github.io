@@ -115,6 +115,8 @@ OpenClaw를 지원하면서 욕심이 생겼다. 집에서도, 회사에서도, 
 
 그래서 **vibemon.io** 도메인을 등록하고, 웹 대시보드와 WebSocket 서버를 구축했다. 이제 어디서든 실시간으로 모니터링할 수 있다.
 
+OpenClaw는 **플러그인 방식**으로 VibeMon을 설치할 수 있게 했다. Claude Code의 hooks와 달리, OpenClaw는 플러그인 시스템을 통해 확장 기능을 추가할 수 있었다. 결국 OpenClaw에게도 스스로 설치하게 만들었다 — AI가 플러그인을 설치하고 설정하는 메타한 상황.
+
 ### 숨겨진 난관: model과 memory
 
 Claude Code hooks에서는 `state`, `tool`, `project` 정보는 알 수 있지만, **model**과 **memory** 정보는 직접 제공되지 않는다.

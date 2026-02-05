@@ -115,6 +115,8 @@ Supporting OpenClaw made me ambitious. I wanted to see the status of all AI agen
 
 So I registered the **vibemon.io** domain and built a web dashboard with WebSocket server. Now I can monitor in real-time from anywhere.
 
+OpenClaw could install VibeMon via a **plugin system**. Unlike Claude Code's hooks, OpenClaw uses a plugin system to add extensions. Eventually, I made OpenClaw install it by itself too — a meta situation where the AI installs and configures the plugin.
+
 ### Hidden Challenge: model and memory
 
 Claude Code hooks provide `state`, `tool`, `project` information, but **model** and **memory** information isn't directly available.

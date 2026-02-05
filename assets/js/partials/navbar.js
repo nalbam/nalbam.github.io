@@ -17,8 +17,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
    * Make the header images move on scroll
    * Start from top, move slightly on scroll
    */
-  window.addEventListener('scroll', function () {
+  var mainElement = document.getElementById("main");
+
+  function updateBackgroundPosition() {
+    if (!mainElement) return;
     var offset = -(window.scrollY || window.pageYOffset || document.body.scrollTop) / 5;
-    document.getElementById("main").style.backgroundPosition = 'center ' + offset + 'px';
-  });
+    mainElement.style.backgroundPosition = 'center ' + offset + 'px';
+  }
+
+  // Set initial position immediately (handles page refresh at scroll position)
+  updateBackgroundPosition();
+
+  // Update on scroll
+  window.addEventListener('scroll', updateBackgroundPosition);
 });

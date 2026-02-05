@@ -74,7 +74,7 @@ curl -X POST http://127.0.0.1:19280/status \
 
 ### 2단계: USB 시리얼
 
-ESP32가 도착했다! **ESP32-C6-LCD-1.47** 보드 — 172×320 해상도의 작은 LCD가 달린 귀여운 기기.
+ESP32가 도착했다! [**ESP32-C6-LCD-1.47**](https://aliexpress.com/item/1005008465501661.html) 보드 — 172×320 해상도의 작은 LCD가 달린 귀여운 기기.
 
 ![ESP32와 Desktop App](/assets/images/2026-02-05/esp32_and_desktop.jpg)
 

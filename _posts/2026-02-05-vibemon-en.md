@@ -74,7 +74,7 @@ curl -X POST http://127.0.0.1:19280/status \
 
 ### Stage 2: USB Serial
 
-The ESP32 arrived! **ESP32-C6-LCD-1.47** board — a cute device with a small 172×320 resolution LCD.
+The ESP32 arrived! [**ESP32-C6-LCD-1.47**](https://aliexpress.com/item/1005008465501661.html) board — a cute device with a small 172×320 resolution LCD.
 
 ![ESP32 and Desktop App](/assets/images/2026-02-05/esp32_and_desktop.jpg)
 

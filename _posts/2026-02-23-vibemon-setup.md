@@ -56,7 +56,9 @@ Once connected, your device is now talking directly to the ESP32 over its local 
 
 ## Step 3: Configure WiFi and Token via the Setup Page
 
-After connecting, a browser should open automatically — or navigate to `http://192.168.4.1` manually.
+After connecting, your device will trigger a **captive portal** — the browser opens automatically. If it doesn't, navigate to `http://192.168.4.1` manually.
+
+> **Using a smartphone?** Make sure to disable mobile data before connecting. Otherwise your phone may route traffic through cellular and the captive portal won't appear.
 
 You'll see the **VibeMon Setup** page:
 
@@ -72,7 +74,7 @@ The setup page lets you configure three things:
 
 ### Selecting Your WiFi
 
-The page scans nearby networks and lists them as selectable options. Just tap or click your network name — no need to type the SSID manually.
+The page scans nearby networks and lists them as selectable options. Just tap or click your network name — no need to type the SSID manually. If your network doesn't appear, move closer to the router and hit **Rescan**.
 
 ### VibeMon Token (Optional but Recommended)
 
@@ -97,6 +99,17 @@ Once you fill in the fields and hit **Save**, the ESP32:
 
 The LCD will show your AI agent's current state: thinking, working, idle, or done — all reflected as pixel art animations on the little screen.
 
+The entire process — from power-on to connected — takes **under 30 seconds** in total.
+
+| Phase | Expected Time |
+|-------|--------------|
+| Boot into provisioning mode | < 5 seconds |
+| WiFi network scan | 3–8 seconds |
+| Credential save | < 3 seconds |
+| WiFi connection after reboot | 5–15 seconds |
+
+> Credentials (WiFi SSID, password, and VibeMon Token) are saved to the ESP32's **NVS (Non-Volatile Storage)**, so they survive reboots and power cycles.
+
 ---
 
 ## Troubleshooting
@@ -107,11 +120,25 @@ The LCD will show your AI agent's current state: thinking, working, idle, or don
 
 **Setup page doesn't open automatically?**
 - Manually navigate to `http://192.168.4.1` in your browser
+- On smartphones, disable mobile data before connecting — cellular traffic can prevent the captive portal from appearing
+
+**Network not showing up in the scan list?**
+- Move closer to your router and tap **Rescan**
+- Verify the router is broadcasting its SSID (not hidden)
+
+**Device isn't connecting to WiFi after setup?**
+- Double-check that your WiFi password was entered correctly
+- After 20 failed connection attempts, the device will automatically clear its saved credentials and reboot back into provisioning mode — just reconfigure from Step 1
+
+**Need to reset WiFi settings without touching the device?**
+- If the device is already connected to your network, send a POST request to `/wifi-reset`
+- This clears saved WiFi credentials (while keeping the VibeMon Token) and reboots into provisioning mode
 
 **Device isn't connecting to VibeMon after setup?**
-- Double-check that your WiFi password was entered correctly
 - Confirm your VibeMon Token is valid at [vibemon.io](https://vibemon.io)
-- Re-enter setup mode and reconfigure
+- Re-enter setup mode and re-enter the token
+
+**Security note:** The default AP password `vibemon123` is publicly known. Complete the WiFi configuration quickly after first boot to minimize exposure.
 
 ---
 

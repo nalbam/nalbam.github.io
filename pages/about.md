@@ -2,6 +2,7 @@
 layout: page
 permalink: /about/
 title: About
+description: "유정열(nalbam) - Agent Platform Engineer / AWS AI Hero. 백엔드 개발과 DevOps/SRE 경험을 바탕으로 AI 에이전트의 개발과 운영을 지원하는 플랫폼을 만듭니다."
 feature-img: "assets/images/pexels/mgm_grand_arena.jpg"
 tags: [Page]
 ---

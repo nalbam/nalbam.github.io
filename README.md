@@ -2,16 +2,19 @@
 
 > **"Why Not?"**
 
-Personal tech blog by **nalbam** - DevOps Engineer / SRE
+Personal tech blog by **nalbam** - Agent Platform Engineer / AWS AI Hero
 
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fnalbam.github.io)](https://nalbam.github.io/)
 [![GitHub](https://img.shields.io/github/followers/nalbam?style=social)](https://github.com/nalbam)
 
 ## About
 
-- DevOps Engineer / SRE
+- Agent Platform Engineer
 - AWS AI Hero
+- Background in backend development and DevOps/SRE
 - AWS DeepRacer Championship 2019, 2020 Finalist
+
+[About](https://nalbam.github.io/about/) · [Resume](https://resume.nalbam.com)
 
 ## Topics
 
@@ -22,9 +25,12 @@ This blog covers various topics including:
 - **Kubernetes** - Helm, Helmfile, Container orchestration
 - **IoT** - Temperature monitoring, Sensor projects
 - **Tools** - Docker, Terraform, Build automation
+- **AI coding tools** - VibeMon, agent status monitoring, developer workflows
 
-## Recent Posts
+## Selected Posts
 
+- VibeMon 2.0
+- Making VibeMon
 - AWS DeepRacer Timer
 - GitHub Actions Build & Create
 - Helmfile Guide
